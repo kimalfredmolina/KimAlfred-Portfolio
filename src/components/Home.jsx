@@ -1,14 +1,22 @@
-import React from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 import profilePic from '../assets/kim.jpg';
 import { FaDownload } from "react-icons/fa6";
+import background from '../assets/devbg.gif';
 
 const Home = () => {
   return (
-    <div id="home" className="min-h-screen flex flex-col items-center justify-center bg-neutral-700 text-white font-poppins">
+    <div 
+      id="home" 
+      className="min-h-screen flex flex-col items-center justify-center bg-neutral-700 text-white font-poppins"
+      style={{ 
+        backgroundImage: `url(${background})`, 
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center' 
+      }}>
       <div className="text-center mb-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">Hey!👋 this is</h1>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">Kim Alfred A. Molina</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 bg-gradient-to-r from-yellow-400 via-neutral-950 to-rose-900 bg-clip-text text-4xl tracking-tight text-transparent">Kim Alfred A. Molina</h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2">Full Stack Developer</p> 
       </div>
       <div className="mb-8">
@@ -18,7 +26,7 @@ const Home = () => {
         <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-blue-600 transition-colors duration-300">
           <FaFacebook />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-rose-900 transition-colors duration-300">
+        <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-rose-700 transition-colors duration-300">
           <FaInstagram />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-black transition-colors duration-300">

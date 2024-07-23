@@ -2,7 +2,7 @@ import logo from '../assets/k.png';
 
 const Navbar = () => {
   return (
-    <div className="fixed top-0 left-0 w-full text-white z-50 font-poppins bg-neutral-700">
+    <div className="fixed top-0 left-0 w-full text-white z-50 font-poppins bg-transparent">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
