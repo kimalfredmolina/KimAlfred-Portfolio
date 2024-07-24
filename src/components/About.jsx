@@ -23,13 +23,13 @@ const About = () => {
                 lobortis felis. Donec euismod, orci id faucibus iaculis, mi libero molestie enim, sit amet efficitur velit erat ut magna.
             </p>
             <div className="ml-8 mt-8 text-xl flex items-center">
-                <FaUser size={30} color="darkred" className="mr-4"/><span className="text-xl mr-4 font-bold">Name:</span> <spam className="text-lg text-2xl font-semibold">Kim Alfred A. Molina</spam>
+                <FaUser size={30} color="green" className="mr-4"/><span className="text-xl mr-4 font-bold">Name:</span> <spam className="text-lg text-2xl font-semibold">Kim Alfred A. Molina</spam>
             </div>  
             <div className="ml-8 mt-4 text-xl flex items-center">
-                <BsFillTelephoneFill size={30} color="darkred" className="mr-4"/><span className="text-xl mr-4 font-bold">Telephone:</span> <spam className="text-lg text-2xl font-semibold">01983123</spam>
+                <BsFillTelephoneFill size={30} color="green" className="mr-4"/><span className="text-xl mr-4 font-bold">Telephone:</span> <spam className="text-lg text-2xl font-semibold">01983123</spam>
             </div> 
             <div className="ml-8 mt-4 text-xl flex items-center">
-                <MdEmail size={30} color="darkred" className="mr-4"/><span className="text-xl mr-4 font-bold">Email:</span> <spam className="text-lg text-2xl font-semibold">kimalfredmolina1224@gmail.com</spam>
+                <MdEmail size={30} color="green" className="mr-4"/><span className="text-xl mr-4 font-bold">Email:</span> <spam className="text-lg text-2xl font-semibold">kimalfredmolina1224@gmail.com</spam>
             </div>
             <div className="md:w-1/2 p-4 mt-8">
                 <h2 className="text-4xl font-bold">Education</h2>
