@@ -1,16 +1,17 @@
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import profilepic from "../assets/kim2.jpg";
 
 const About = () => {
   return (
-    <div className="mt-16">
+    <div id="about" className="mt-16">
         <div className="text-white w-full text-center">
             <h1 className="text-6xl font-bold">About Me</h1>
         </div>
         <div className="bg-foreground text-white py-20">
-            <div className="container mx-auto flex flex-col md:flex-row items-center">
-                <img src="https://placehold.co/300x400" alt="Profile Picture" className="rounded-lg border-2 border-primary mx-auto"/>
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
+            <img src={profilepic} alt="Profile Picture" className="rounded-lg border-2 border-primary mx-auto w-1/4 h-96 object-cover" />
             <div className="md:w-1/2 p-4">
                 <h2 className="text-4xl font-bold">Why Me?</h2>
             <p className="mt-4 text-white font-normal">
