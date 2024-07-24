@@ -10,7 +10,7 @@ const Navbar = () => {
               <img src={logo} alt="Logo" className="h-12" />
             </a>
           </div>
-          <div className="flex-1 flex justify-center items-center space-x-12 text-lg">
+          <div className="flex-1 flex justify-center items-center space-x-12 text-2xl">
             <a href="#" className="hover:text-green-500 font-bold duration-300">Home</a>
             <a href="#" className="hover:text-green-500 font-bold duration-300">About</a>
             <a href="#" className="hover:text-green-500 font-bold duration-300">Skills</a>

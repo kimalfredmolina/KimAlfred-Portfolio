@@ -12,6 +12,7 @@ import { GrMysql } from "react-icons/gr";
 import { FaFigma } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import background from "../assets/code.gif"
 
 const iconVariants = (duration) => ({
     initial: { y: -10},
@@ -27,7 +28,7 @@ const iconVariants = (duration) => ({
 });
 const Skills = () => {
   return (
-    <div className="bg-gray-800 text-white py-10">
+    <div className="text-white py-10">
         <motion.h2 
         whileInView={{opcaity: 1, y: 0}}
         initial={{ opcaity: 1, y: -100}}
