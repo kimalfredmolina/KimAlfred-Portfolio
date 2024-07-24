@@ -15,8 +15,8 @@ const Home = () => {
         backgroundPosition: 'center' 
       }}>
       <div className="text-center mb-8">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">Hey!👋 this is</h1>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 bg-gradient-to-r from-yellow-400 via-neutral-950 to-rose-900 bg-clip-text text-4xl tracking-tight text-transparent">Kim Alfred A. Molina</h2>
+        <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">Hey!👋 this is</h1>
+        <h2 className="text-6xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 bg-gradient-to-r from-yellow-400 via-neutral-950 to-rose-900 bg-clip-text text-4xl tracking-tight text-transparent">Kim Alfred A. Molina</h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2">Computer Science Student</p> 
       </div>
       <div className="mb-8">
