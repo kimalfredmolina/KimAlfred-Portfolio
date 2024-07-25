@@ -12,7 +12,6 @@ import { GrMysql } from "react-icons/gr";
 import { FaFigma } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import background from "../assets/code.gif"
 
 const iconVariants = (duration) => ({
     initial: { y: -10},
@@ -134,9 +133,9 @@ const Skills = () => {
         whileInView={{opacity: 1, x: 0}}
         initial={{opacity: 0 , x: -100}}
         transition={{duration: 1}}
-        className="mt-8 text-4xl font-semibold mb-8 text-center">Dev Ops</motion.div>
+        className="mt-16 text-4xl font-semibold text-center">Dev Ops</motion.div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-16">
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
             <motion.div 
             whileInView={{ opacity: 1, x: 0}}
             initial={{ opacity: 0, x:1.5}}
