@@ -23,19 +23,19 @@ const Home = () => {
         <img src={profilePic} alt="Profile" className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-8 border-lime-400" />
       </div>
       <div className="flex space-x-4 mb-8">
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-blue-600 transition-colors duration-300">
+        <a href="https://www.facebook.com/kimalfred.amolina" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-blue-600 transition-colors duration-300">
           <FaFacebook />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-rose-700 transition-colors duration-300">
+        <a href="https://www.instagram.com/kim_alfredkim/" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-rose-700 transition-colors duration-300">
           <FaInstagram />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-black transition-colors duration-300">
+        <a href="https://github.com/kimalfred" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-black transition-colors duration-300">
           <FaGithub />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-blue-600 transition-colors duration-300">
+        <a href="https://www.linkedin.com/in/kim-alfred-molina-323455276/" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-blue-600 transition-colors duration-300">
           <FaLinkedin />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-orange-600 transition-colors duration-300">
+        <a href="https://stackoverflow.com/users/23153926/kim-alfred-a-molina" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-orange-600 transition-colors duration-300">
           <FaStackOverflow />
         </a>
       </div>
