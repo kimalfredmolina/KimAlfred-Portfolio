@@ -11,12 +11,12 @@ const Navbar = () => {
             </a>
           </div>
           <div className="flex-1 flex justify-center items-center space-x-12 text-2xl">
-            <a href="#" className="hover:text-red-400 font-bold duration-300">Home</a>
-            <a href="#" className="hover:text-red-400 font-bold duration-300">About</a>
-            <a href="#" className="hover:text-red-400 font-bold duration-300">Technologies</a>
-            <a href="#" className="hover:text-red-400 font-bold duration-300">Experience</a>
-            <a href="#" className="hover:text-red-400 font-bold duration-300">Projects</a>
-            <a href="#" className="hover:text-red-400 font-bold duration-300">Contact</a>
+            <a href="#" className="hover:text-red-600 font-bold duration-300">Home</a>
+            <a href="#" className="hover:text-red-600 font-bold duration-300">About</a>
+            <a href="#" className="hover:text-red-600 font-bold duration-300">Technologies</a>
+            <a href="#" className="hover:text-red-600 font-bold duration-300">Experience</a>
+            <a href="#" className="hover:text-red-600 font-bold duration-300">Projects</a>
+            <a href="#" className="hover:text-red-600 font-bold duration-300">Contact</a>
           </div>
         </div>
       </div>
