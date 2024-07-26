@@ -6,7 +6,7 @@ export const EXPERIENCES = [
     description: `Upcoming 3rd Year Computer Science Students aspiring being a full stack developer`,
     technologies: ["HTML", "CSS", "Javascript", "PHP", "Java", "VB.Net", "Python", "MySQL", "Figma"],
   },
-  {
+  /*{
     year: "2022 - 2023",
     role: "Frontend Developer",
     company: "Adobe",
@@ -26,5 +26,5 @@ export const EXPERIENCES = [
     company: "Paypal",
     description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
     technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
+  },*/
 ];

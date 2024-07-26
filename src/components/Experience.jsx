@@ -33,7 +33,7 @@ const Experience = () => {
                     <p className="mb-4 text-white">{experience.description}</p>
                     {experience.technologies.map((tech, index) =>(
                         <span key={index} className="mr-2 mt-4 rounded bg-blue-900 px-2 py-1 text-sm
-                        font-medium text-white">{tech}</span>
+                        font-medium text-white hover:text-red-600 transition-colors duration-300">{tech}</span>
                     ))}
                     </motion.div>
                 </div> 
