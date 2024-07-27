@@ -15,7 +15,7 @@ import icon8 from "../assets/icons/tail.svg"
 
 const ProjectCard = ({ image, title, description, icons, link }) => {
   return (
-    <div className="bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+    <div className="bg-gray-700 text-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="p-4 flex flex-col flex-grow justify-between">
         <h3 className="text-xl font-bold">{title}</h3>
