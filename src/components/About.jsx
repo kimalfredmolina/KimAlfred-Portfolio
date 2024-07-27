@@ -12,21 +12,21 @@ const About = () => {
             whileInView={{opcaity: 1, y: 0}}
             initial={{ opcaity: 1, y: -100}}
             transition={{duration: 1.5}}
-            className="text-6xl font-bold">About Me</motion.h1>
+            className="text-6xl font-bold">About</motion.h1>
         </div>
         <div className="bg-foreground text-white py-20">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
             <motion.img 
             whileInView={{ opacity: 1, x: 0}}
             initial={{ opacity: 0, x: -100}}
-            transition={{ duration: 1}}
+            transition={{ duration: 1.5}}
             src={profilepic} alt="Profile Picture" className="rounded-lg border-2 border-primary mx-auto w-1/4 h-96 object-cover" />
             <div className="md:w-1/2 p-4">
                 <motion.h2 
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100}}
                 transition={{ duration: 1}}
-                className="text-4xl font-bold">Why Me?</motion.h2>
+                className="text-4xl font-bold">About Me</motion.h2>
 
             <motion.p 
             whileInView={{ opacity: 1, x: 0 }}
