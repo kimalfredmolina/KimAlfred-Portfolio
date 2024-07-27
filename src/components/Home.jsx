@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div 
       id="home" 
-      className="min-h-screen flex flex-col items-center justify-center bg-neutral-700 text-white font-poppins"
+      className="min-h-screen flex flex-col items-center justify-center text-white font-poppins"
       style={{ 
         backgroundImage: `url(${background})`, 
         backgroundSize: 'cover',
