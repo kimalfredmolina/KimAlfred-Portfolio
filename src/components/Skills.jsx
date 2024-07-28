@@ -27,7 +27,7 @@ const iconVariants = (duration) => ({
 });
 const Skills = () => {
   return (
-    <div className="text-white py-10">
+    <div id="skills" className="text-white py-10">
         <motion.h2 
         whileInView={{opcaity: 1, y: 0}}
         initial={{ opcaity: 1, y: -100}}
