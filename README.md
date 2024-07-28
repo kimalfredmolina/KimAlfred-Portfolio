@@ -1,6 +1,5 @@
 # Portfolio Website Using Reactjs & Tailwind CSS
 
-![image](https://github.com/user-attachments/assets/224bbc9f-bf55-4e89-b3ba-af1d01fa9804)
 
 
 ## Installation
