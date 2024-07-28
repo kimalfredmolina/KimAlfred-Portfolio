@@ -22,11 +22,13 @@ const About = () => {
             transition={{ duration: 1.5}}
             src={profilepic} alt="Profile Picture" className="rounded-lg border-2 border-primary mx-auto w-1/4 h-96 object-cover" />
             <div className="md:w-1/2 p-4">
+
                 <motion.h2 
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100}}
                 transition={{ duration: 1}}
-                className="text-4xl font-bold">About Me</motion.h2>
+                className="text-4xl font-bold">About Me
+                </motion.h2>
 
             <motion.p 
             whileInView={{ opacity: 1, x: 0 }}
@@ -41,7 +43,7 @@ const About = () => {
             <motion.p
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100}}
-            transition={{ duration: 1.5}} 
+            transition={{ duration: 1}} 
             className="mt-4 text-white font-normal">
                 eleifend purus, fermentum dignissim nisl tincidunt non. Mauris semper maximus ornare. Aliquam sodales ultrices mi sit amet tristique. Integer sit amet bibendum lorem, ac 
                 lobortis felis. Donec euismod, orci id faucibus iaculis, mi libero molestie enim, sit amet efficitur velit erat ut magna.
@@ -50,7 +52,7 @@ const About = () => {
             <motion.div 
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100}}
-            transition={{ duration: 2}}
+            transition={{ duration: 1}}
             className="ml-8 mt-8 text-xl flex items-center">
                 <FaUser size={30} color="green" className="mr-4"/><span className="text-xl mr-4 font-bold">Name:</span> <spam className="text-lg text-2xl font-semibold">Kim Alfred A. Molina</spam>
             </motion.div> 
@@ -58,7 +60,7 @@ const About = () => {
             <motion.div 
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100}}
-            transition={{ duration: 2}}
+            transition={{ duration: 1}}
             className="ml-8 mt-4 text-xl flex items-center">
                 <BsFillTelephoneFill size={30} color="green" className="mr-4"/><span className="text-xl mr-4 font-bold">Telephone:</span> <spam className="text-lg text-2xl font-semibold">01983123</spam>
             </motion.div> 
@@ -66,7 +68,7 @@ const About = () => {
             <motion.div 
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100}}
-            transition={{ duration: 2}}
+            transition={{ duration: 1}}
             className="ml-8 mt-4 text-xl flex items-center">
                 <MdEmail size={30} color="green" className="mr-4"/><span className="text-xl mr-4 font-bold">Email:</span> <spam className="text-lg text-2xl font-semibold">kimalfredmolina1224@gmail.com</spam>
             </motion.div>
