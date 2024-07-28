@@ -5,6 +5,9 @@ import pic2 from "../assets/empsys.png"
 import pic3 from "../assets/blog.png"
 import pic4 from "../assets/cmd.png"
 import pic5 from "../assets/stud.png"
+import pic6 from "../assets/genshin.png"
+import pic7 from "../assets/atm.png"
+import pic8 from "../assets/book.png"
 /*icon png's*/
 import icon1 from "../assets/icons/html.png"
 import icon2 from "../assets/icons/css.png"
@@ -72,23 +75,44 @@ const Projects = () => {
         link: 'https://github.com/kimalfred/Travel-Blog',
     },
     {
-      image: pic4,
-      title: 'Command Prompt Tutorial Website',
-      description: 'Discover The Ease Of Mastering Command Prompt With Our Step-By-Step Tutorials On Our Website. Our User-Friendly Guides Make CMD Accessible To All Skill Levels.',
-      icons: [ icon1, icon2, icon3],
-      link: 'https://github.com/kimalfred/CMD-Tutorial-Website',
+        image: pic4,
+        title: 'Command Prompt Tutorial Website',
+        description: 'Discover The Ease Of Mastering Command Prompt With Our Step-By-Step Tutorials On Our Website. Our User-Friendly Guides Make CMD Accessible To All Skill Levels.',
+        icons: [ icon1, icon2, icon3],
+        link: 'https://github.com/kimalfred/CMD-Tutorial-Website',
     },
     {
-      image: pic5,
-      title: 'Student Profile Managemnet System',
-      description: 'Simple Student Profile Management System Using Django & HTML',
-      icons: [ icon9, icon1 ],
-      link: 'https://github.com/kimalfred/Student-Profile-Management',
+        image: pic5,
+        title: 'Student Profile Managemnet System',
+        description: 'Simple Student Profile Management System Using Django & HTML',
+        icons: [ icon9, icon1 ],
+        link: 'https://github.com/kimalfred/Student-Profile-Management',
+    },
+    {
+        image: pic6,
+        title: 'Genshin Infograph Website',
+        description: 'Simple Genshin Character Infograph Website HTML, CSS, and Javascript',
+        icons: [ icon1, icon2, icon3 ],
+        link: 'https://github.com/kimalfred/Genshin-Characters',
+    },
+    {
+        image: pic7,
+        title: 'ATM Interface System',
+        description: 'user-friendly and intuitive interface using Java Swing. Making the UI resemble a real ATM familiarity was the difficult part of this project.',
+        icons: [ icon4, icon5 ],
+        link: 'https://github.com/kimalfred/ATM-Interface-System',
+    },
+    {
+        image: pic8,
+        title: 'Online Flight Reservation System',
+        description: 'Online Flight Reservation System using Java and MySQL. Users were able to easily manage their accounts, examine their booking history, and make appointments',
+        icons: [ icon4, icon5 ],
+        link: 'https://github.com/kimalfred/Reservation-System',
     },
   ];
 
   return (
-    <div className="mt-16">
+    <div id="projects" className="mt-16">
       <div className="container mx-auto">
         <motion.h2 
         whileInView={{opacity: 1, y: 0}}
