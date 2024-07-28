@@ -8,9 +8,10 @@ import { FaPython } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { SiVisualstudio } from "react-icons/si";
 import { SiDjango } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
+import { SiMysql } from "react-icons/si";
 import { FaFigma } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
@@ -41,11 +42,11 @@ const Skills = () => {
         className="mt-8 text-4xl font-semibold mb-8 text-center">Languages</motion.div>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-            <motion.div 
-            whileInView={{ opacity: 1, x: 0}}
-            initial={{ opacity: 0, x:1.5}}
-            transition={{ duration: 1.5}}
-            className="flex flex-wrap justify-center gap-4">
+                <motion.div 
+                whileInView={{ opacity: 1, x: 0}}
+                initial={{ opacity: 0, x:1.5}}
+                transition={{ duration: 1.5}}
+                className="flex flex-wrap justify-center gap-4">
                 <motion.div 
                 variants={iconVariants(2.5)}
                 initial="initial"
@@ -99,7 +100,7 @@ const Skills = () => {
                 initial="initial"
                 animate="animate"
                 className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <FaJava className="text-6xl text-sky-600"/>
+                    <FaJava className="text-6xl text-blue-600"/>
                 </motion.div>
 
                 <motion.div 
@@ -136,17 +137,17 @@ const Skills = () => {
         className="mt-16 text-4xl font-semibold text-center">Dev Ops</motion.div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-            <motion.div 
-            whileInView={{ opacity: 1, x: 0}}
-            initial={{ opacity: 0, x:1.5}}
-            transition={{ duration: 1.5}}
-            className="flex flex-wrap justify-center gap-4">
+                <motion.div 
+                whileInView={{ opacity: 1, x: 0}}
+                initial={{ opacity: 0, x:1.5}}
+                transition={{ duration: 1.5}}
+                className="flex flex-wrap justify-center gap-4">
                 <motion.div 
                 variants={iconVariants(3)}
                 initial="initial"
                 animate="animate"
                 className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <GrMysql className="text-6xl text-blue-600"/>
+                    <SiMysql className="text-6xl text-blue-600"/>
                 </motion.div>
 
                 <motion.div 
@@ -162,8 +163,16 @@ const Skills = () => {
                 initial="initial"
                 animate="animate"
                 className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <FaGitAlt className="text-6xl text-red-700"/>
+                    <FaGithub className="text-6xl text-white"/>
                 </motion.div> 
+
+                <motion.div 
+                variants={iconVariants(2.5)}
+                initial="initial"
+                animate="animate"
+                className="rounded-2xl border-4 border-neutral-800 p-4">
+                    <FaGitAlt className="text-6xl text-red-700"/>
+                </motion.div>
 
                 </motion.div>             
             </div>
