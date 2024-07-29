@@ -17,11 +17,11 @@ const Contact = () => {
             </div>
             <p className="text-xl mb-4">I’m interested in...</p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-gray-700 text-white py-2 px-4 rounded">Web Development</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded">Tech Trending’s</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded">Blog Website</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded">Ecommerce Website</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded">Backend</button>
+              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Web Development</button>
+              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Tech Trending’s</button>
+              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Blog Website</button>
+              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Ecommerce Website</button>
+              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Backend</button>
             </div>
           </div>
           <div className="bg-gray-700 p-8 rounded-lg md:w-1/2 w-full">
