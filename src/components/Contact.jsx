@@ -1,4 +1,8 @@
-
+import logo1 from "../assets/logo/fb.png"
+import logo2 from "../assets/logo/insta.webp"
+import logo3 from "../assets/logo/github.webp"
+import logo4 from "../assets/logo/linkedin.webp"
+import logo5 from "../assets/logo/stack.png"
 
 const Contact = () => {
   return (
@@ -9,11 +13,11 @@ const Contact = () => {
           <div className="text-white mb-8 md:mb-0 md:w-1/2">
             <h3 className="text-2xl mb-4">Let’s Discuss on something cool together on...</h3>
             <div className="flex space-x-4 mb-8">
-              <a href="#"><img src="path/to/facebook-icon.png" alt="Facebook" className="w-8 h-8"/></a>
-              <a href="#"><img src="path/to/instagram-icon.png" alt="Instagram" className="w-8 h-8"/></a>
-              <a href="#"><img src="path/to/github-icon.png" alt="Github" className="w-8 h-8"/></a>
-              <a href="#"><img src="path/to/linkedin-icon.png" alt="LinkedIn" className="w-8 h-8"/></a>
-              <a href="#"><img src="path/to/stackoverflow-icon.png" alt="StackOverflow" className="w-8 h-8"/></a>
+              <a href="#"><img src={logo1} alt="Facebook" className="w-8 h-8"/></a>
+              <a href="#"><img src={logo2} alt="Instagram" className="w-8 h-8"/></a>
+              <a href="#"><img src={logo3} alt="Github" className="w-8 h-8"/></a>
+              <a href="#"><img src={logo4} alt="LinkedIn" className="w-8 h-8"/></a>
+              <a href="#"><img src={logo5} alt="StackOverflow" className="w-8 h-8"/></a>
             </div>
             <p className="text-xl mb-4">I’m interested in...</p>
             <div className="flex flex-wrap gap-4">
