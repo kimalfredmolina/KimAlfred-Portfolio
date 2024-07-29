@@ -6,18 +6,18 @@ import logo5 from "../assets/logo/stack.png"
 
 const Contact = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div id="contact" className="min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4">
         <h2 className="text-white text-5xl font-bold text-center mb-16">Contact Me</h2>
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-white mb-8 md:mb-0 md:w-1/2">
             <h3 className="text-2xl mb-4">Let’s Discuss on something cool together on...</h3>
             <div className="flex space-x-4 mb-8">
-              <a href="#"><img src={logo1} alt="Facebook" className="w-8 h-8"/></a>
-              <a href="#"><img src={logo2} alt="Instagram" className="w-8 h-8"/></a>
-              <a href="#"><img src={logo3} alt="Github" className="w-8 h-8"/></a>
-              <a href="#"><img src={logo4} alt="LinkedIn" className="w-8 h-8"/></a>
-              <a href="#"><img src={logo5} alt="StackOverflow" className="w-8 h-8"/></a>
+              <a href="https://www.facebook.com/kimalfred.amolina"><img src={logo1} alt="Facebook" className="w-8 h-8"/></a>
+              <a href="https://www.instagram.com/kim_alfredkim/"><img src={logo2} alt="Instagram" className="w-8 h-8"/></a>
+              <a href="https://github.com/kimalfred"><img src={logo3} alt="Github" className="w-8 h-8"/></a>
+              <a href="https://www.linkedin.com/in/kim-alfred-molina-323455276/"><img src={logo4} alt="LinkedIn" className="w-8 h-8"/></a>
+              <a href="https://stackoverflow.com/users/23153926/kim-alfred-a-molina"><img src={logo5} alt="StackOverflow" className="w-8 h-8"/></a>
             </div>
             <p className="text-xl mb-4">I’m interested in...</p>
             <div className="flex flex-wrap gap-4">
