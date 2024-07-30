@@ -47,7 +47,7 @@ Free Buttons for Website (Tailwind CSS)
 
 To Deploy your ReactJS Project
 
--https://vercel.com/
+- https://vercel.com/
 
 ## How to run React.js
 
