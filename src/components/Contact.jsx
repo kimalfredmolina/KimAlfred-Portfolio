@@ -32,11 +32,11 @@ const Contact = () => {
             </div>
             <p className="text-xl mb-4">I’m interested in...</p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Web Development</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Tech Trending’s</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Blog Website</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Ecommerce Website</button>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Backend</button>
+              <a className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Web Development</a>
+              <a className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Tech Trending’s</a>
+              <a className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Blog Website</a>
+              <a className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Ecommerce Website</a>
+              <a className="bg-gray-700 text-white py-2 px-4 rounded hover:text-red-600 transition-colors duration-300">Backend</a>
             </div>
           </motion.div>
           <motion.div
