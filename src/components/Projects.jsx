@@ -9,6 +9,7 @@ import pic6 from "../assets/genshin.png"
 import pic7 from "../assets/atm.png"
 import pic8 from "../assets/book.png"
 import pic9 from "../assets/horizon.png"
+import pic10 from "../assets/portfolio.png"
 /*icon png's*/
 import icon1 from "../assets/icons/html.png"
 import icon2 from "../assets/icons/css.png"
@@ -61,6 +62,13 @@ const Projects = () => {
         description: 'The Employee Management System is a comprehensive application designed to manage various employee-related functions in an organization.',
         icons: [ icon4, icon5],
         link: 'https://github.com/kimalfred/Employee-Management-System',
+    },
+    {
+      image: pic10,
+      title: 'Kim Alfred Portfolio Website',
+      description: 'My Personal Portfolio Website using ReactJS and TailwindCSS',
+      icons: [ icon7, icon8 ],
+      link: 'https://github.com/kimalfred/KimAlfred-Portfolio',
     },
     {
         image: icon6 ,
