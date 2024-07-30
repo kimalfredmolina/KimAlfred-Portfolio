@@ -9,12 +9,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="pb-20">
+    <div className="pb-16">
       <motion.h2 
         whileInView={{opacity: 1, y:0}}
         initial={{opacity: 0, y: -100}}
         transition={{duration: 0.5}}
-        className="text-white text-6xl font-bold text-center mb-16">
+        className="text-white text-5xl font-bold text-center mb-8">
             Get in Touch
       </motion.h2>
       <div className="text-center tracking-tighter">
