@@ -2,6 +2,11 @@
 
 ![image](https://github.com/user-attachments/assets/d8d79705-f019-42dc-b45b-0cf8a1b6ab7c)
 
+### To be Updated Feature
+- Responsive
+- CV downloaded
+- Mailer
+- Details about me
 
 ## Installation
 
