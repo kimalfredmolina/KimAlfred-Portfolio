@@ -1,5 +1,7 @@
 # Portfolio Website Using Reactjs & Tailwind CSS
 
+Simple Portfolio Website using ReactJS and TailwindCSS
+
 ![image](https://github.com/user-attachments/assets/d8d79705-f019-42dc-b45b-0cf8a1b6ab7c)
 
 ### To be Updated Feature
