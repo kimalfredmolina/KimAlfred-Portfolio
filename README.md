@@ -52,7 +52,7 @@ Free Buttons for Website (Tailwind CSS)
 
 - https://buttons.ibelick.com/
 
-To Deploy your ReactJS Project
+To Deploy your ReactJS Project use-
 
 - https://vercel.com/
 
