@@ -85,7 +85,7 @@ const Contact = () => {
                 <input
                   className="w-full px-3 py-2 text-gray-700 bg-white rounded"
                   id="name"
-                  name="name"
+                  name="user_name"
                   type="text"
                   placeholder="Your Name"
                   value={formData.name}
@@ -96,7 +96,7 @@ const Contact = () => {
                 <input
                   className="w-full px-3 py-2 text-gray-700 bg-white rounded"
                   id="email"
-                  name="email"
+                  name="user_email"
                   type="email"
                   placeholder="Your Email"
                   value={formData.email}
@@ -107,7 +107,7 @@ const Contact = () => {
                 <input
                   className="w-full px-3 py-2 text-gray-700 bg-white rounded"
                   id="subject"
-                  name="subject"
+                  name="user_subject"
                   type="text"
                   placeholder="Your Subject"
                   value={formData.subject}
