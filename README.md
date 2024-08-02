@@ -39,7 +39,10 @@ It allows to navigate between different components and manage the browser histor
 ```
 npm install react-router-dom
 ```
+Free ReactJS Mailer
 
+- https://www.emailjs.com/
+  
 Free React Bootstrap
 
 - https://ui.shadcn.com/
