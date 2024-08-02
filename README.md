@@ -4,12 +4,6 @@ Simple Portfolio Website using ReactJS and TailwindCSS
 
 ![image](https://github.com/user-attachments/assets/d8d79705-f019-42dc-b45b-0cf8a1b6ab7c)
 
-### To be Updated Feature
-- Responsive
-- CV downloaded
-- Mailer
-- Details about me
-
 ## Installation
 
 Tailwind CSS
@@ -40,8 +34,11 @@ It allows to navigate between different components and manage the browser histor
 npm install react-router-dom
 ```
 Free ReactJS Mailer
+https://www.emailjs.com/
 
-- https://www.emailjs.com/
+```
+npm install emailjs-com
+```
   
 Free React Bootstrap
 
