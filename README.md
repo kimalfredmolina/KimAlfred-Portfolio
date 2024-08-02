@@ -1,7 +1,14 @@
 # Portfolio Website Using Reactjs & Tailwind CSS
 
+Simple Portfolio Website using ReactJS and TailwindCSS
+
 ![image](https://github.com/user-attachments/assets/d8d79705-f019-42dc-b45b-0cf8a1b6ab7c)
 
+### To be Updated Feature
+- Responsive
+- CV downloaded
+- Mailer
+- Details about me
 
 ## Installation
 
@@ -44,6 +51,10 @@ Free Background for Website (Tailwind CSS, Vanilla CSS)
 Free Buttons for Website (Tailwind CSS)
 
 - https://buttons.ibelick.com/
+
+To Deploy your ReactJS Project use-
+
+- https://vercel.com/
 
 ## How to run React.js
 
