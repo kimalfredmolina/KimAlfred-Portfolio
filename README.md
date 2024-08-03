@@ -6,7 +6,7 @@ Simple Portfolio Website using ReactJS and TailwindCSS
 
 ## Installation
 
-Tailwind CSS
+Tailwind CSS read documentation
 https://tailwindcss.com/docs/guides/vite
 
 ```
