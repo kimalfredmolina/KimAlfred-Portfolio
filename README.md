@@ -15,7 +15,7 @@ npm install
 npm install -D tailwindcss postcss autoprefixer
 ```
 
-React.js Icons
+Free React.js Icons
 https://react-icons.github.io/react-icons/
 
 ```
