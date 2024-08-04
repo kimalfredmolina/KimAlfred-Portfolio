@@ -38,7 +38,7 @@ const Home = () => {
         variants={container(1)}
         initial="hidden"
         animate="visible"
-        className="text-6xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 bg-gradient-to-r from-yellow-400 via-rose-700 to-lime-500 bg-clip-text text-4xl tracking-tight text-transparent">Kim Alfred A. Molina</motion.h2>
+        className="text-6xl md:text-5xl lg:text-6xl font-bold mt-2 bg-gradient-to-r from-yellow-400 via-rose-700 to-lime-500 bg-clip-text text-4xl tracking-tight text-transparent">Kim Alfred A. Molina</motion.h2>
 
         <motion.p 
         variants={container(1.5)}
