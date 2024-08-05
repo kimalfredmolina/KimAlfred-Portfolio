@@ -56,7 +56,7 @@ To Deploy your ReactJS Project use-
 
 - https://vercel.com/
 
-## How to run React.js
+## To run React.js Project
 
 ```
 npm run dev
