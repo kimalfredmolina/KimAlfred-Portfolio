@@ -35,9 +35,9 @@ const About = () => {
             initial={{ opacity: 0, x: 100}}
             transition={{ duration: 1}}
             className="mt-4 text-white font-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies diam vitae ipsum aliquet, vitae convallis sem imperdiet.Ut at massa 
-                nec nisi feugiat iaculis. Vivamus consectetur metus augue, feugiat lacinia nisl consectetur a. Aenean vestibulum ligula et eros sollicitudin, id pharetra sem malesuada. 
-                Phasellus feugiat faucibus velit, nec tincidunt ex sollicitudin sed. In hac habitasse platea dictumst. Nulla vulputate
+                I am an aspiring full stack developer with a passion for building dynamic and scalable web applications. As a third-year Computer Science student, I'm continually learning and expanding my knowledge in front-end technologies like HTML, CSS, JavaScript, and ReactJS,  
+                as well as back-end technologies including Java, Python, PHP, and Django. I also work with databases like MySQL and design user interfaces with Figma. I am dedicated to developing my 
+                skills to create innovative solutions that enhance user experiences and drive business growth.
             </motion.p>
 
             <motion.p
