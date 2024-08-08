@@ -35,9 +35,8 @@ const About = () => {
             initial={{ opacity: 0, x: 100}}
             transition={{ duration: 1}}
             className="mt-4 text-white font-normal">
-                I am currently pursuing a Bachelor of Science in Computer Science at Taguig City University, 
-                where I have consistently achieved high academic standing as a Dean's Lister. My rigorous coursework and dedication have 
-                equipped me with a strong foundation in computer science principles, programming, and problem-solving skills.
+                I'm Kim Alfred, a passionate web developer who can build websites from scratch. 
+                Whether you're looking to establish your online presence, list your services, or create a new online store.
             </motion.p>
 
             <motion.p
@@ -45,8 +44,9 @@ const About = () => {
             initial={{ opacity: 0, x: 100}}
             transition={{ duration: 1}} 
             className="mt-4 text-white font-normal">
-                eleifend purus, fermentum dignissim nisl tincidunt non. Mauris semper maximus ornare. Aliquam sodales ultrices mi sit amet tristique. Integer sit amet bibendum lorem, ac 
-                lobortis felis. Donec euismod, orci id faucibus iaculis, mi libero molestie enim, sit amet efficitur velit erat ut magna.
+                I am currently pursuing a Bachelor of Science in Computer Science at Taguig City University, 
+                where I have consistently achieved high academic standing as a Dean's Lister. My rigorous coursework and dedication have 
+                equipped me with a strong foundation in computer science principles, programming, and problem-solving skills.
             </motion.p>
 
             <motion.div 
