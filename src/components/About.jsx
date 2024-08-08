@@ -35,9 +35,9 @@ const About = () => {
             initial={{ opacity: 0, x: 100}}
             transition={{ duration: 1}}
             className="mt-4 text-white font-normal">
-                I am an aspiring full stack developer with a passion for building dynamic and scalable web applications. As a third-year Computer Science student, I'm continually learning and expanding my knowledge in front-end technologies like HTML, CSS, JavaScript, and ReactJS,  
-                as well as back-end technologies including Java, Python, PHP, and Django. I also work with databases like MySQL and design user interfaces with Figma. I am dedicated to developing my 
-                skills to create innovative solutions that enhance user experiences and drive business growth.
+                I am currently pursuing a Bachelor of Science in Computer Science at Taguig City University, 
+                where I have consistently achieved high academic standing as a Dean's Lister. My rigorous coursework and dedication have 
+                equipped me with a strong foundation in computer science principles, programming, and problem-solving skills.
             </motion.p>
 
             <motion.p
