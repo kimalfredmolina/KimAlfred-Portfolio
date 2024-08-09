@@ -41,8 +41,7 @@ const Navbar = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-gray-800 text-lime-400 text-lg absolute w-full left-0 top-20 z-40 shadow-lg"
-        >
+          className="md:hidden bg-gray-800 text-lime-400 text-lg absolute w-full left-0 top-20 z-40 shadow-lg">
           <div className="flex flex-col items-center py-4 space-y-4">
             <a href="#home" onClick={toggleNav} className="hover:text-red-600 font-bold duration-300">Home</a>
             <a href="#about" onClick={toggleNav} className="hover:text-red-600 font-bold duration-300">About</a>
