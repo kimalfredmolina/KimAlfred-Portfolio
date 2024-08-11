@@ -141,7 +141,7 @@ const Projects = () => {
         whileInView={{opacity: 1, y: 0}}
         initial={{opacity: 0 , y: -100}}
         transition={{duration: 1.5}}
-        className="my-20 text-center text-4xl md:text-6xl font-bold text-white">Projects</motion.h2>
+        className="my-20 text-center text-5xl sm:text-6xl font-bold text-white">Projects</motion.h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
