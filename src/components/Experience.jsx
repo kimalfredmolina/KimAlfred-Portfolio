@@ -24,7 +24,7 @@ const Experience = () => {
                     whileInView={{opacity: 1, x: 0}}
                     initial={{opacity: 0, x: 100}}
                     transition={{duration: 1}}
-                    className="w-full max-w-xl lg:w-3/4 ml-2">
+                    className="w-full max-w-xl lg:w-3/4 ml-3.5">
                         <h6 className="mb-2 font-bold text-green-500 text-2xl">
                             {experience.role} -{" "}
                             <span className="text-lg text-white"> 
