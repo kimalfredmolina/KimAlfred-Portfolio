@@ -47,7 +47,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1.5 }}
-          className="text-white text-5xl sm:text-6xl font-bold text-center mb-16">
+          className="text-white text-5xl sm:text-6xl font-bold text-center mb-16 mt-16">
           Contact Me
         </motion.h2>
         
