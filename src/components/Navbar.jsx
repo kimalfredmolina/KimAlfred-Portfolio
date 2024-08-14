@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <a href="#">
+            <a href="https://www.facebook.com/kimalfred.amolina">
               <img src={logo} alt="Logo" className="h-12" />
             </a>
           </div>
