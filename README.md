@@ -40,7 +40,7 @@ https://www.emailjs.com/
 npm install emailjs-com
 ```
   
-Free React Bootstrap
+Free React Templates
 
 - https://ui.shadcn.com/
 
