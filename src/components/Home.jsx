@@ -92,7 +92,7 @@ const Home = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
-          href="https://github.com/kimalfred" 
+          href="https://github.com/kimalfredmolina" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl hover:text-black transition-colors duration-300">
@@ -125,8 +125,7 @@ const Home = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
-          href="#" 
-          target="_blank" 
+          href="#contact" 
           rel="noopener noreferrer" 
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl hover:text-rose-600 transition-colors duration-300">
           <BiLogoGmail />
