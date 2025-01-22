@@ -17,11 +17,12 @@ import icon2 from "../assets/icons/css.png"
 import icon3 from "../assets/icons/js.png"
 import icon4 from "../assets/icons/java.png"
 import icon5 from "../assets/icons/mysql.png"
-import icon6 from "../assets/icons/py.webp"
+import icon6 from "../assets/icons/firebase.png"
 import icon7 from "../assets/icons/react.png"
 import icon8 from "../assets/icons/tail.svg"
 import icon9 from "../assets/icons/django.svg"
 import icon10 from "../assets/icons/figma.png"
+import icon11 from "../assets/icons/android.png"
 
 const ProjectCard = ({ image, title, description, icons, link }) => {
   return (
@@ -76,6 +77,13 @@ const Projects = () => {
         description: 'My Personal Portfolio Website using ReactJS and TailwindCSS',
         icons: [ icon7, icon8 ],
         link: 'https://github.com/kimalfred/KimAlfred-Portfolio',
+    },
+    {
+      image: pic2,
+      title: 'FitHub - Set Workout Tracker App',
+      description: 'FitHub - Set Workout Tracker is an Android app designed to help users organize and track their workout routines efficiently.',
+      icons: [ icon4, icon6, icon11],
+      link: 'https://github.com/kimalfredmolina/FitHub-Set-Workout-Tracker',
     },
     {
         image: pic2,
