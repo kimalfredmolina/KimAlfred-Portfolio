@@ -10,6 +10,7 @@ import pic7 from "../assets/atm.png"
 import pic8 from "../assets/book.png"
 import pic9 from "../assets/horizon.png"
 import pic10 from "../assets/portfolio.png"
+import pic11 from "../assets/webai.png"
 /*icon png's*/
 import icon1 from "../assets/icons/html.png"
 import icon2 from "../assets/icons/css.png"
@@ -63,25 +64,25 @@ const Projects = () => {
         link: 'https://github.com/kimalfred/Process-Scheduling-Solver',
     },
     {
+        image: pic11 ,
+        title: 'Lumina Insight AI Mental Health Therapy',
+        description: 'A Web Base AI Integration system with a voice recognition for user and text-to-voice responds of AI ',
+        icons: [ icon7, icon8 ],
+        link: 'https://github.com/kimalfredmolina/Lumina-Insight-AI-Mental-Health-Therapy',
+    },
+    {
+        image: pic10,
+        title: 'Kim Alfred Portfolio Website',
+        description: 'My Personal Portfolio Website using ReactJS and TailwindCSS',
+        icons: [ icon7, icon8 ],
+        link: 'https://github.com/kimalfred/KimAlfred-Portfolio',
+    },
+    {
         image: pic2,
         title: 'Employee Management System',
         description: 'The Employee Management System is a comprehensive application designed to manage various employee-related functions in an organization.',
         icons: [ icon4, icon5],
         link: 'https://github.com/kimalfred/Employee-Management-System',
-    },
-    {
-      image: pic10,
-      title: 'Kim Alfred Portfolio Website',
-      description: 'My Personal Portfolio Website using ReactJS and TailwindCSS',
-      icons: [ icon7, icon8 ],
-      link: 'https://github.com/kimalfred/KimAlfred-Portfolio',
-    },
-    {
-        image: icon6 ,
-        title: 'Voice Recognition',
-        description: 'Simple Python voice recognition that User can use voice command to communicate with their computer.',
-        icons: [ icon6 ],
-        link: 'https://github.com/kimalfred/Python-Voice-Recognition',
     },
     {
         image: pic3,
