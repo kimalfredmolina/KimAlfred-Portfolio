@@ -11,6 +11,7 @@ import pic8 from "../assets/book.png"
 import pic9 from "../assets/horizon.png"
 import pic10 from "../assets/portfolio.png"
 import pic11 from "../assets/webai.png"
+import pic12 from "../assets/bookingsys.png"
 /*icon png's*/
 import icon1 from "../assets/icons/html.png"
 import icon2 from "../assets/icons/css.png"
@@ -23,6 +24,7 @@ import icon8 from "../assets/icons/tail.svg"
 import icon9 from "../assets/icons/django.svg"
 import icon10 from "../assets/icons/figma.png"
 import icon11 from "../assets/icons/android.png"
+import icon12 from "../assets/icons/php.png"
 
 const ProjectCard = ({ image, title, description, icons, link }) => {
   return (
@@ -91,6 +93,13 @@ const Projects = () => {
         description: 'The Employee Management System is a comprehensive application designed to manage various employee-related functions in an organization.',
         icons: [ icon4, icon5],
         link: 'https://github.com/kimalfred/Employee-Management-System',
+    },
+    {
+        image: pic12,
+        title: 'Tonic and Trim Barbershop Booking System',
+        description: 'Tonic and Trim is a booking system for Barbershops that allows customers to schedule appointments, view available time slots, and manage bookings.',
+        icons: [ icon12, icon1, icon2, icon3, icon5],
+        link: 'https://github.com/kimalfredmolina/Barber-Shop-Booking-System',
     },
     {
         image: pic3,
