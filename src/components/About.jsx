@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div id="about" className="mt-16">
+    <div id="about" className="py-14">
       <div className="text-white w-full text-center">
         <motion.h1 
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ const About = () => {
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1 }}
                 className="flex items-center justify-center md:justify-start text-xl">
-                <FaUser size={30} color="green" className="mr-4"/>
+                <FaUser size={30} color="purple" className="mr-4"/>
                 <span className="font-bold">Name:</span>
                 <span className="ml-4 font-semibold text-lg sm:text-xl">Kim Alfred A. Molina</span>
               </motion.div>
@@ -73,7 +73,7 @@ const About = () => {
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1 }}
                 className="flex items-center justify-center md:justify-start mt-4 text-xl">
-                <BsFillTelephoneFill size={30} color="green" className="mr-4"/>
+                <BsFillTelephoneFill size={30} color="purple" className="mr-4"/>
                 <span className="font-bold">Telephone:</span>
                 <span className="ml-4 font-semibold text-lg sm:text-xl">01983123</span>
               </motion.div>
@@ -83,7 +83,7 @@ const About = () => {
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1 }}
                 className="flex items-center justify-center md:justify-start mt-4 text-xl">
-                <MdEmail size={30} color="green" className="mr-4"/>
+                <MdEmail size={30} color="purple" className="mr-4"/>
                 <span className="font-bold">Email:</span>
                 <span className="ml-4 font-semibold text-lg sm:text-xl">kimalfredmolina1224@gmail.com</span>
               </motion.div>

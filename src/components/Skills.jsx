@@ -41,7 +41,7 @@ const Skills = () => {
         whileInView={{opacity: 1, x: 0}}
         initial={{opacity: 0 , x: 100}}
         transition={{duration: 1}}
-        className="mt-8 text-4xl font-semibold mb-8 text-center">Languages</motion.div>
+        className="mt-8 text-4xl font-semibold mb-8 text-center">Languages and Frameworks</motion.div>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
                 <motion.div 
@@ -136,7 +136,7 @@ const Skills = () => {
         whileInView={{opacity: 1, x: 0}}
         initial={{opacity: 0 , x: -100}}
         transition={{duration: 1}}
-        className="mt-16 text-4xl font-semibold text-center">Dev Ops</motion.div>
+        className="mt-16 text-4xl font-semibold text-center">Tools & Dev Ops</motion.div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
                 <motion.div 

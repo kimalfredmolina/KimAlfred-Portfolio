@@ -40,7 +40,7 @@ const Home = () => {
           variants={container(1)}
           initial="hidden"
           animate="visible"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-2 bg-gradient-to-r from-yellow-400 via-rose-700 to-lime-500 bg-clip-text text-transparent">
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-2 bg-gradient-to-r from-rose-700 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           Kim Alfred A. Molina
         </motion.h2>
 
@@ -61,7 +61,7 @@ const Home = () => {
           transition={{ duration: 1.5 }} 
           src={profilePic} 
           alt="Profile" 
-          className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full border-8 border-lime-400"/>
+          className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full border-8 border-purple-400"/>
       </div>
 
       {/* Icons */}
@@ -135,7 +135,7 @@ const Home = () => {
       <div className="flex space-x-4">
         <button className="group relative">
           <div className="relative z-10 inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-neutral-600 transition-all duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3">
-            <a href={cv} download className="text-white hover:text-lime-400 transition-colors duration-300">Download CV</a>  
+            <a href={cv} download className="text-white hover:text-purple-600 transition-colors duration-300">Download CV</a>  
             <FaDownload color='white'/>
           </div>
           <div className="absolute inset-0 z-0 h-full w-full rounded-md transition-all duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:[box-shadow:5px_5px_#a3a3a3,10px_10px_#d4d4d4,15px_15px_#e5e5e5]"></div>
