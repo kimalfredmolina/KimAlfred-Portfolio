@@ -13,6 +13,11 @@ import pic9 from "../assets/horizon.png"
 import pic10 from "../assets/portfolio.png"
 import pic11 from "../assets/webai.png"
 import pic12 from "../assets/bookingsys.png"
+import pic13 from "../assets/emc.png"
+import pic14 from "../assets/buildify.png"
+import pic15 from "../assets/fithub.jpg"
+import pic16 from "../assets/docu.jpg"
+import pic17 from "../assets/cictchatroom.jpg"
 /*icon png's*/
 import icon1 from "../assets/icons/html.png"
 import icon2 from "../assets/icons/css.png"
@@ -26,6 +31,8 @@ import icon9 from "../assets/icons/django.svg"
 import icon10 from "../assets/icons/figma.png"
 import icon11 from "../assets/icons/android.png"
 import icon12 from "../assets/icons/php.png"
+import icon13 from "../assets/icons/csharp.png"
+import icon14 from "../assets/icons/microsql.png"
 
 const ProjectCard = ({ image, title, description, icons, link, category }) => {
   return (
@@ -108,11 +115,27 @@ const Projects = () => {
 
   const projects = [
     {
+        image: pic13,
+        title: 'EMC Training Portal Website',
+        description: 'This Raspberry Pi-based system integrates a fingerprint sensor (R307) and webcam to automate activity monitoring. Users register with their personal details and fingerprint, which are securely stored in Firebase.',
+        icons: [icon7, icon8, icon6],
+        link: 'https://emctrainingportal.online/login',
+        category: 'Web Development'
+    },
+    {
         image: pic1,
         title: 'Process Scheduling Solver & Tutorial',
         description: 'Process Scheduling Solver! This tool provides solutions for various process scheduling algorithms to help manage and optimize system resources efficiently.',
         icons: [icon1, icon2, icon3],
         link: 'https://github.com/kimalfred/Process-Scheduling-Solver',
+        category: 'Web Development'
+    },
+    {
+        image: pic14,
+        title: 'Buildify - Content Management System',
+        description: 'A dynamic website builder that empowers users to create stunning web pages with a block-based interface and real-time preview functionality.',
+        icons: [icon12, icon1, icon3, icon8, icon5],
+        link: 'https://github.com/kimalfredmolina/Buildify',
         category: 'Web Development'
     },
     {
@@ -132,7 +155,7 @@ const Projects = () => {
         category: 'Web Development'
     },
     {
-        image: pic2,
+        image: pic15,
         title: 'FitHub - Set Workout Tracker App',
         description: 'FitHub - Set Workout Tracker is an Android app designed to help users organize and track their workout routines efficiently.',
         icons: [icon4, icon6, icon11],
@@ -148,6 +171,14 @@ const Projects = () => {
         category: 'Desktop Apps'
     },
     {
+        image: pic16,
+        title: 'TCU Document Management System',
+        description: 'TCU Document Management System is a comprehensive solution for managing and organizing documents within an organization.',
+        icons: [icon13, icon1, icon2, icon3, icon14],
+        link: 'https://github.com/kimalfredmolina/TCU-CICT-Document-Management-System',
+        category: 'Web Development'
+    },
+    {
         image: pic12,
         title: 'Tonic and Trim Barbershop Booking System',
         description: 'Tonic and Trim is a booking system for Barbershops that allows customers to schedule appointments, view available time slots, and manage bookings.',
@@ -161,6 +192,14 @@ const Projects = () => {
         description: 'Simple Philippine Travel Blog website, showcasing beautiful and most tourist attractions in the Philippines.',
         icons: [icon7, icon8],
         link: 'https://github.com/kimalfred/Travel-Blog',
+        category: 'Web Development'
+    },
+    {
+        image: pic17,
+        title: 'TCU CICT Lounge',
+        description: 'TCU CICT Lounge is an online platform for TCU CICT student to communicate, share ideas, and access resources related to their academic journey.',
+        icons: [icon7, icon8, icon9],
+        link: 'https://github.com/kimalfredmolina/TCU-CICT-Lounge',
         category: 'Web Development'
     },
     {
