@@ -109,8 +109,9 @@ const Projects = () => {
     { name: 'All', icon: '🎯' },
     { name: 'Web Development', icon: '💻' },
     { name: 'Mobile Apps', icon: '📱' },
-    { name: 'UI/UX Design', icon: '🎨' },
-    { name: 'Desktop Apps', icon: '🖥️' }
+    { name: 'Desktop Apps', icon: '🖥️' },
+    { name: 'UI/UX Design', icon: '🖼️' },
+    { name: 'Graphic Designs', icon: '🎨' }
   ];
 
   const projects = [

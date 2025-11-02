@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="hidden md:flex flex-1 justify-center items-center space-x-8 lg:space-x-12 text-lg lg:text-2xl">
             <a href="#home" className="hover:text-pink-600 font-bold duration-300">Home</a>
             <a href="#about" className="hover:text-pink-600 font-bold duration-300">About</a>
-            <a href="#skills" className="hover:text-pink-600 font-bold duration-300">Technologies</a>
+            <a href="#skills" className="hover:text-pink-600 font-bold duration-300">Skills</a>
             <a href="#exp" className="hover:text-pink-600 font-bold duration-300">Experience</a>
             <a href="#projects" className="hover:text-pink-600 font-bold duration-300">Projects</a>
             <a href="#contact" className="hover:text-pink-600 font-bold duration-300">Contact</a>
@@ -45,7 +45,7 @@ const Navbar = () => {
           <div className="flex flex-col items-center py-4 space-y-4">
             <a href="#home" onClick={toggleNav} className="hover:text-pink-600 font-bold duration-300">Home</a>
             <a href="#about" onClick={toggleNav} className="hover:text-pink-600 font-bold duration-300">About</a>
-            <a href="#skills" onClick={toggleNav} className="hover:text-pink-600 font-bold duration-300">Technologies</a>
+            <a href="#skills" onClick={toggleNav} className="hover:text-pink-600 font-bold duration-300">Skills</a>
             <a href="#exp" onClick={toggleNav} className="hover:text-pink-600 font-bold duration-300">Experience</a>
             <a href="#projects" onClick={toggleNav} className="hover:text-pink-600 font-bold duration-300">Projects</a>
             <a href="#contact" onClick={toggleNav} className="hover:text-pink-600 font-bold duration-300">Contact</a>
