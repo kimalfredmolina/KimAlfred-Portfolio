@@ -18,6 +18,7 @@ import pic14 from "../assets/buildify.png"
 import pic15 from "../assets/fithub.jpg"
 import pic16 from "../assets/docu.jpg"
 import pic17 from "../assets/cictchatroom.jpg"
+import pic18 from "../assets/snap.jpg"
 /*icon png's*/
 import icon1 from "../assets/icons/html.png"
 import icon2 from "../assets/icons/css.png"
@@ -33,6 +34,10 @@ import icon11 from "../assets/icons/android.png"
 import icon12 from "../assets/icons/php.png"
 import icon13 from "../assets/icons/csharp.png"
 import icon14 from "../assets/icons/microsql.png"
+import icon15 from "../assets/icons/typescript.png"
+import icon16 from "../assets/icons/jest.png"
+import icon17 from "../assets/icons/expo.svg"
+import icon18 from "../assets/icons/collab.webp"
 
 const ProjectCard = ({ image, title, description, icons, link, category }) => {
   return (
@@ -115,6 +120,14 @@ const Projects = () => {
   ];
 
   const projects = [
+    {
+        image: pic18,
+        title: 'SnapNutrient - Nutrition Scanner App',
+        description: 'SnapNutrient is an intelligent mobile application developed to address this growing need by providing users with real-time dietary analysis and macronutrient estimation',
+        icons: [icon15, icon6, icon16, icon11, icon18, icon17],
+        link: 'https://github.com/kimalfredmolina/SnapNutrient_App',
+        category: 'Mobile Apps'
+    },
     {
         image: pic13,
         title: 'EMC Training Portal Website',
