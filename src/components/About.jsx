@@ -15,7 +15,7 @@ const About = () => {
     {
       icon: <BsFillTelephoneFill size={24} />,
       label: "Telephone",
-      value: "01983123"
+      value: "+63 9277-324-896"
     },
     {
       icon: <MdEmail size={24} />,
@@ -177,14 +177,15 @@ const About = () => {
 
               <div className="space-y-4 text-gray-300">
                 <p className="text-base sm:text-lg leading-relaxed">
-                  I'm <span className="text-purple-400 font-semibold">Kim Alfred</span>, a passionate web developer who can build websites from scratch. 
-                  Whether you're looking to establish your online presence, list your services, or create a new online store.
+                  I'm <span className="text-purple-400 font-semibold">Kim Alfred</span>, a Computer Science student with experience in full-stack web and mobile development.
+                   I specialize in building responsive interfaces, managing databases, and developing application features using modern technologies such as React, React Native, and Firebase.
+                    I focus on creating efficient digital solutions and continuously improving UI/UX to deliver high-quality results.
                 </p>
 
+
                 <p className="text-base sm:text-lg leading-relaxed">
-                  I am currently pursuing a <span className="text-purple-400 font-semibold">Bachelor of Science in Computer Science</span> at Taguig City University, 
-                  where I have consistently achieved high academic standing as a <span className="text-pink-400 font-semibold">Dean's Lister</span>. My rigorous coursework and dedication have 
-                  equipped me with a strong foundation in computer science principles, programming, and problem-solving skills.
+                  I am currently pursuing a <span className="text-purple-400 font-semibold">Bachelor of Science in Computer Science
+                    </span> at Taguig City University. My coursework has helped me build a strong foundation in computer science principles, programming, and problem-solving skills.
                 </p>
               </div>
             </motion.div>
