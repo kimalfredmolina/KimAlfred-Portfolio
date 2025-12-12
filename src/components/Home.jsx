@@ -1,7 +1,7 @@
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 import { BiLogoGmail } from "react-icons/bi";
 import profilePic from '../assets/kim.jpg';
-import cv from '../assets/Kim Alfred Molina Resume.pdf'
+import cv from '../assets/Molina, Kim Alfred A Resume.pdf'
 import { FaDownload } from "react-icons/fa6";
 import background from '../assets/code.gif';
 import { motion } from "framer-motion";
