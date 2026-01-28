@@ -128,16 +128,25 @@ export default function ProfileCard({ isDark, setIsDark }) {
 
             {/* Download Button - Right Side */}
             <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className={`px-6 py-2.5 rounded-lg font-medium flex items-center gap-2 border-2 transition-colors duration-300 ${
-                isDark 
-                  ? 'border-gray-400 text-gray-300 hover:bg-[#334155]' 
-                  : 'border-gray-800 text-gray-800 hover:bg-gray-50'
-              }`}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className={`group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg px-6 font-medium transition-colors duration-500
+                ${
+                  isDark
+                    ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
+                    : 'bg-neutral-900 text-neutral-100 border border-gray-300'
+                }`}
             >
-              <Download size={18} />
-              Download Resume
+              {/* Text */}
+              <div className="translate-y-0 opacity-100 transition duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
+                <Download size={18} />
+                Download Resume
+              </div>
+
+              {/* Icon (slides up) */}
+              <div className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                <Download size={22} />
+              </div>
             </motion.button>
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import { GitHubCalendar } from 'react-github-calendar';
 
@@ -16,11 +16,11 @@ const AboutPage = ({ isDark }) => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 8 },
+    hidden: { opacity: 0, y: 22 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.25 },
+      transition: { duration: 1.5 },
     },
   };
 
@@ -170,52 +170,60 @@ const AboutPage = ({ isDark }) => {
             </div>
           </div>
 
-          {/* Calendar Container with better spacing */}
-          <div className="w-full">
-            {/* Desktop View */}
-            <div className="hidden md:block">
-              <div className="flex justify-center">
-                <GitHubCalendar
-                  username="kimalfredmolina"
-                  year={selectedYear}
-                  colorScheme={isDark ? 'dark' : 'light'}
-                  blockSize={12}
-                  blockMargin={4}
-                  fontSize={13}
-                  style={{
-                    margin: '0 auto',
-                  }}
-                />
-              </div>
-            </div>
+          {/* Calendar Container */}
+          <div className="relative min-h-[170px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedYear}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="absolute inset-0 w-full"
+              >
+                {/* Desktop */}
+                <div className="hidden md:block">
+                  <div className="flex justify-center">
+                    <GitHubCalendar
+                      username="kimalfredmolina"
+                      year={selectedYear}
+                      colorScheme={isDark ? 'dark' : 'light'}
+                      blockSize={12}
+                      blockMargin={4}
+                      fontSize={13}
+                    />
+                  </div>
+                </div>
 
-            {/* Tablet View */}
-            <div className="hidden sm:block md:hidden overflow-x-auto pb-4">
-              <div className="min-w-[650px]">
-                <GitHubCalendar
-                  username="kimalfredmolina"
-                  year={selectedYear}
-                  colorScheme={isDark ? 'dark' : 'light'}
-                  blockSize={11}
-                  blockMargin={3}
-                  fontSize={13}
-                />
-              </div>
-            </div>
+                {/* Tablet */}
+                <div className="hidden sm:block md:hidden overflow-x-auto pb-4">
+                  <div className="min-w-[650px]">
+                    <GitHubCalendar
+                      username="kimalfredmolina"
+                      year={selectedYear}
+                      colorScheme={isDark ? 'dark' : 'light'}
+                      blockSize={11}
+                      blockMargin={3}
+                      fontSize={13}
+                    />
+                  </div>
+                </div>
 
-            {/* Mobile View */}
-            <div className="block sm:hidden overflow-x-auto pb-4">
-              <div className="min-w-[600px]">
-                <GitHubCalendar
-                  username="kimalfredmolina"
-                  year={selectedYear}
-                  colorScheme={isDark ? 'dark' : 'light'}
-                  blockSize={11}
-                  blockMargin={3}
-                  fontSize={12}
-                />
-              </div>
-            </div>
+                {/* Mobile */}
+                <div className="block sm:hidden overflow-x-auto pb-4">
+                  <div className="min-w-[600px]">
+                    <GitHubCalendar
+                      username="kimalfredmolina"
+                      year={selectedYear}
+                      colorScheme={isDark ? 'dark' : 'light'}
+                      blockSize={11}
+                      blockMargin={3}
+                      fontSize={12}
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </motion.div>
       </motion.div>
