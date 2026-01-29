@@ -44,7 +44,7 @@ const SkillsPage = ({ isDark }) => {
         { name: 'VB.Net' },
     ],
     '• Frameworks': [
-        { name: 'React' },
+        { name: 'React.js' },
         { name: 'React Native' },
         { name: 'Tailwind CSS' },
         { name: 'Django' },

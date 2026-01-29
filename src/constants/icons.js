@@ -48,7 +48,7 @@ export const ICONS = {
     'VB.Net': vbnet,
 
     // Frameworks
-    React: react,
+    'React.js': react,
     'React Native': native,
     'Tailwind CSS': tailwind,
     Django: django,

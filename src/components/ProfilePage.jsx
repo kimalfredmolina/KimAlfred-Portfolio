@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Moon, Sun, Download } from 'lucide-react';
 import Profile from '../assets/kim2.jpg'
 import BannerGif from '../assets/code.gif'
+import cv from '../assets/Kim Alfred Molina - Resume.pdf';
 
 export default function ProfileCard({ isDark, setIsDark }) {
+
+  const [copied, setCopied] = useState(false);
+  const email = "kimalfredmolina1224@gmail.com";
+
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -123,31 +134,61 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 >
                   <Linkedin size={18} />
                 </motion.a>
+
+                <div className="relative">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={handleCopyEmail}
+                    className="p-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors duration-300"
+                  >
+                    <Mail size={18} />
+                  </motion.button>
+
+                  <AnimatePresence>
+                    {copied && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 6 }}
+                        className={`absolute -bottom-10 left-1/2 -translate-x-1/2
+                          whitespace-nowrap text-xs px-3 py-1 rounded-md shadow-md
+                          ${isDark ? 'bg-black text-white' : 'bg-gray-900 text-white'}`}
+                      >
+                        Kim Alfred Email address copied!
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
             </div>
 
             {/* Download Button - Right Side */}
-            <motion.button
+            <motion.div
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className={`group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg px-6 font-medium transition-colors duration-500
-                ${
+              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg"
+            >
+              {/* Link for downloading Resume */}
+              <a
+                href={cv}
+                download="Kim_Alfred_Resume.pdf"
+                className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
                   isDark
                     ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
                     : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                }`}
-            >
-              {/* Text */}
-              <div className="translate-y-0 opacity-100 transition duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
-                <Download size={18} />
-                Download Resume
-              </div>
-
-              {/* Icon (slides up) */}
-              <div className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <Download size={22} />
-              </div>
-            </motion.button>
+                }`}>
+                {/* Text */}
+                <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
+                  <Download size={18} />
+                  Download Resume
+                </span>
+                {/* Icon slides up */}
+                <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  <Download size={22} />
+                </span>
+              </a>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>
