@@ -24,17 +24,16 @@ const AboutPage = ({ isDark }) => {
     },
   };
 
-  const cardBg = isDark ? 'bg-[#2d3748]' : 'bg-gray-100';
-  const cardBorder = isDark ? 'border border-gray-600' : 'border border-gray-300';
+  const cardBg = isDark ? 'bg-gradient-to-br from-[#2d3748] to-[#1e293b]' : 'bg-gradient-to-br from-white to-gray-50';
   const headingColor = isDark ? 'text-red-400' : 'text-red-600';
-  const textColor = isDark ? 'text-gray-300' : 'text-gray-800';
+  const textColor = isDark ? 'text-gray-300' : 'text-gray-700';
   const currentYear = new Date().getFullYear();
   const [selectedYear, setSelectedYear] = useState(currentYear);
 
   return (
     <div
       className={`transition-colors duration-500 ${
-        isDark ? 'bg-[#1e293b]' : 'bg-white'
+        isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
       }`}
     >
       <motion.div
@@ -48,9 +47,19 @@ const AboutPage = ({ isDark }) => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1.5 }}
-          className={`p-7 rounded-xl ${cardBg} ${cardBorder}`}
+          whileHover={{ y: -4 }}
+          className={`relative p-7 rounded-2xl ${cardBg} ${
+            isDark 
+              ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]' 
+              : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]'
+          } transition-all duration-300 overflow-hidden`}
         >
-          <h2 className={`text-xl font-bold mb-4 ${headingColor}`}>
+          {/* Accent line */}
+          <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
+            isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
+          }`} />
+          
+          <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>
             About Me
           </h2>
 
@@ -72,23 +81,39 @@ const AboutPage = ({ isDark }) => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
-            className={`p-7 rounded-xl ${cardBg} ${cardBorder}`}
+            whileHover={{ y: -4 }}
+            className={`relative p-7 rounded-2xl ${cardBg} ${
+              isDark 
+                ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]' 
+                : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]'
+            } transition-all duration-300 overflow-hidden`}
           >
-            <h2 className={`text-xl font-bold mb-4 ${headingColor}`}>
+            {/* Accent line */}
+            <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
+              isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
+            }`} />
+            
+            <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>
               Education
             </h2>
 
-            <div className={`space-y-1 ${textColor}`}>
-              <p className="font-semibold text-lg">
+            <div className={`space-y-2 ${textColor}`}>
+              <p className="font-semibold text-lg leading-tight">
                 Bachelor of Science in Computer Science
               </p>
-              <p className="text-md text-red-400">
+              <p className={`text-md ${isDark ? 'text-red-400' : 'text-red-500'} font-medium`}>
                 Taguig City University
               </p>
 
-              <span className="inline-block mt-3 text-md font-medium text-gray-900 bg-lime-400 px-3 py-1 rounded-md">
-                2022 – 2026
-              </span>
+              <div className="pt-2">
+                <span className={`inline-flex items-center text-sm font-semibold ${
+                  isDark 
+                    ? 'text-gray-900 bg-gradient-to-r from-lime-400 to-lime-500' 
+                    : 'text-white bg-gradient-to-r from-red-500 to-red-600'
+                } px-4 py-1.5 rounded-full shadow-md`}>
+                  2022 – 2026
+                </span>
+              </div>
             </div>
           </motion.div>
 
@@ -97,36 +122,60 @@ const AboutPage = ({ isDark }) => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
-            className={`p-7 rounded-xl ${cardBg} ${cardBorder}`}
+            whileHover={{ y: -4 }}
+            className={`relative p-7 rounded-2xl ${cardBg} ${
+              isDark 
+                ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]' 
+                : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]'
+            } transition-all duration-300 overflow-hidden`}
           >
-            <h2 className={`text-xl font-bold mb-4 ${headingColor}`}>
+            {/* Accent line */}
+            <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
+              isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
+            }`} />
+            
+            <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>
               Contact
             </h2>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2 rounded-md bg-lime-400">
-                  <Phone size={16} className="text-gray-900" />
+            <div className="space-y-3">
+              <motion.div 
+                whileHover={{ x: 4 }}
+                className="flex items-center gap-3 group"
+              >
+                <div className={`p-2.5 rounded-xl ${
+                  isDark 
+                    ? 'bg-gradient-to-br from-lime-400 to-lime-500' 
+                    : 'bg-gradient-to-br from-red-500 to-red-600'
+                } shadow-md group-hover:shadow-lg transition-shadow duration-300`}>
+                  <Phone size={16} className={isDark ? 'text-gray-900' : 'text-white'} />
                 </div>
-                <span className={`text-sm ${textColor}`}>
+                <span className={`text-sm ${textColor} font-medium`}>
                   +63 927 732 4896
                 </span>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center gap-3">
-                <div className="p-2 rounded-md bg-lime-400">
-                  <Mail size={16} className="text-gray-900" />
+              <motion.div 
+                whileHover={{ x: 4 }}
+                className="flex items-center gap-3 group"
+              >
+                <div className={`p-2.5 rounded-xl ${
+                  isDark 
+                    ? 'bg-gradient-to-br from-lime-400 to-lime-500' 
+                    : 'bg-gradient-to-br from-red-500 to-red-600'
+                } shadow-md group-hover:shadow-lg transition-shadow duration-300`}>
+                  <Mail size={16} className={isDark ? 'text-gray-900' : 'text-white'} />
                 </div>
-                <span className={`text-sm ${textColor}`}>
+                <span className={`text-sm ${textColor} font-medium`}>
                   kimalfredmolina1224@gmail.com
                 </span>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </motion.div>
 
-      {/* GitHub Activity - Improved */}
+      {/* GitHub Activity */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -136,12 +185,21 @@ const AboutPage = ({ isDark }) => {
       >
         <motion.div
           variants={itemVariants}
-          className={`p-8 rounded-xl ${cardBg} ${cardBorder} shadow-lg`}
+          className={`relative p-8 rounded-2xl ${cardBg} ${
+            isDark 
+              ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)]' 
+              : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)]'
+          } overflow-hidden`}
         >
+          {/* Accent line */}
+          <div className={`absolute top-4 left-0 w-1 h-20 rounded-r-full ${
+            isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
+          }`} />
+          
           {/* Header with Year Selector */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-6">
             <div>
-              <h2 className={`text-2xl font-bold ${headingColor} mb-2`}>
+              <h2 className={`text-2xl font-bold ${headingColor} mb-2 tracking-tight`}>
                 GitHub Activity
               </h2>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -149,23 +207,27 @@ const AboutPage = ({ isDark }) => {
               </p>
             </div>
 
-            {/* Year Selector - Horizontal on larger screens */}
+            {/* Year Selector */}
             <div className="flex gap-2 flex-wrap">
               {[2026, 2025, 2024, 2023, 2022].map((year) => (
-                <button
+                <motion.button
                   key={year}
                   onClick={() => setSelectedYear(year)}
-                  className={`px-4 py-2 text-sm rounded-lg transition-all duration-200 font-medium
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`px-4 py-2 text-sm rounded-xl transition-all duration-200 font-semibold
                     ${
                       selectedYear === year
-                        ? 'bg-lime-500 text-gray-900 shadow-md scale-105'
+                        ? isDark
+                          ? 'bg-gradient-to-r from-lime-400 to-lime-500 text-gray-900 shadow-lg'
+                          : 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg'
                         : isDark
-                          ? 'bg-[#1f2937] text-gray-300 hover:bg-[#374151] hover:scale-105'
-                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:scale-105'
+                          ? 'bg-[#1f2937] text-gray-300 hover:bg-[#374151] shadow-md'
+                          : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
                     }`}
                 >
                   {year}
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Moon, Sun, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Moon, Sun, Download } from 'lucide-react';
 import Profile from '../assets/kim2.jpg'
 import BannerGif from '../assets/code.gif'
 
@@ -28,7 +28,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
 
   return (
     <div className={`transition-colors duration-500 ${
-      isDark ? 'bg-[#1e293b]' : 'bg-white'
+      isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
     }`}>
       {/* Toggle Button - Fixed Position */}
       <motion.button

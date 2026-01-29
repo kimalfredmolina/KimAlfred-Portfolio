@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ProfilePage from './components/ProfilePage';
 import AboutPage from './components/AboutPage';
+import SkillsPage from './components/SkillsPage';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -10,6 +11,7 @@ const App = () => {
       <div className="relative z-10">       
           <ProfilePage isDark={isDark} setIsDark={setIsDark} />
           <AboutPage isDark={isDark} />
+          <SkillsPage isDark={isDark} />
       </div>
     </div>
   )
