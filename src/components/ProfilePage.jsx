@@ -4,10 +4,12 @@ import { Github, Linkedin, Mail, Moon, Sun, Download } from 'lucide-react';
 import Profile from '../assets/kim2.jpg'
 import BannerGif from '../assets/code.gif'
 import cv from '../assets/Kim Alfred Molina - Resume.pdf';
+import BurgerMenu from '../constants/BurgerMenu'
 
 export default function ProfileCard({ isDark, setIsDark }) {
 
   const [copied, setCopied] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const email = "kimalfredmolina1224@gmail.com";
 
   const handleCopyEmail = async () => {
@@ -15,6 +17,15 @@ export default function ProfileCard({ isDark, setIsDark }) {
     setCopied(true);
 
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  // Function to scroll to specific section
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setMenuOpen(false);
+    }
   };
 
   const containerVariants = {
@@ -41,24 +52,17 @@ export default function ProfileCard({ isDark, setIsDark }) {
     <div className={`transition-colors duration-500 ${
       isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
     }`}>
-      {/* Toggle Button - Fixed Position */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsDark(!isDark)}
-        className={`fixed top-6 right-6 p-2.5 rounded-full transition-all duration-300 z-50 ${
-          isDark 
-            ? 'bg-[#475569] text-yellow-400 hover:bg-[#64748b]' 
-            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-        }`}
-      >
-        {isDark ? <Sun size={18} /> : <Moon size={18} />}
-      </motion.button>
+
+      <BurgerMenu
+        isDark={isDark}
+        setIsDark={setIsDark}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        scrollToSection={scrollToSection}
+      />
 
       <motion.div
+        id="profile"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

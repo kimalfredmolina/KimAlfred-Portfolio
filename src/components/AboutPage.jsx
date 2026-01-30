@@ -32,7 +32,7 @@ const AboutPage = ({ isDark }) => {
 
   return (
     <div
-      className={`transition-colors duration-500 ${
+      id="about" className={`transition-colors duration-500 ${
         isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
       }`}
     >

@@ -72,7 +72,7 @@ const SkillsPage = ({ isDark }) => {
 
   return (
     <div
-      className={`transition-colors duration-500 min-h-screen ${
+      id="skills" className={`transition-colors duration-500 min-h-screen ${
         isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
       }`}
     >
