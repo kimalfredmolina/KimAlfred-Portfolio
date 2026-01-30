@@ -36,10 +36,10 @@ const SkillsPage = ({ isDark }) => {
         { name: 'HTML' },
         { name: 'CSS' },
         { name: 'JavaScript' },
+        { name: 'TypeScript' },
         { name: 'Python' },
         { name: 'PHP' },
         { name: 'Java' },
-        { name: 'TypeScript' },
         { name: 'C#' },
         { name: 'VB.Net' },
     ],
@@ -100,7 +100,7 @@ const SkillsPage = ({ isDark }) => {
           />
 
           <h2 className={`text-2xl font-bold mb-6 ${headingColor} tracking-tight`}>
-            Skills
+            Technical Skills
           </h2>
 
           <div className="space-y-6">

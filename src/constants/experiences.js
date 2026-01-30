@@ -4,6 +4,6 @@ export const EXPERIENCES = [
     role: "Developer Intern",
     company: "Inspire Holdings Inc.",
     description: `N/A For now`,
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Node.js"],
   },
 ];
