@@ -45,8 +45,8 @@ const AboutPage = ({ isDark }) => {
         {/* About Me */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1.5 }}
+          initial={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }}
           whileHover={{ y: -4 }}
           className={`relative p-7 rounded-2xl ${cardBg} ${
             isDark 
@@ -79,8 +79,8 @@ const AboutPage = ({ isDark }) => {
           {/* Education */}
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            transition={{ duration: 1.5 }}
+            initial={{ opacity: 0, x: 20 }}
+            transition={{ duration: 0.5 }}
             whileHover={{ y: -4 }}
             className={`relative p-7 rounded-2xl ${cardBg} ${
               isDark 
@@ -120,8 +120,8 @@ const AboutPage = ({ isDark }) => {
           {/* Contact */}
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            transition={{ duration: 1.5 }}
+            initial={{ opacity: 0, x: 20 }}
+            transition={{ duration: 0.5 }}
             whileHover={{ y: -4 }}
             className={`relative p-7 rounded-2xl ${cardBg} ${
               isDark 
