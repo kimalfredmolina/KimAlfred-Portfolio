@@ -23,6 +23,7 @@ import mysql from '../assets/icons/mysql.png';
 import firebase from '../assets/icons/firebase.png';
 import mongodb from '../assets/icons/mongodb.png';
 import postgre from '../assets/icons/postgre.png';
+import mssql from '../assets/icons/mssql.png';
 
 // Tools
 import git from '../assets/icons/git.png';
@@ -30,6 +31,8 @@ import github from '../assets/icons/github.png';
 import figma from '../assets/icons/figma.png';
 import cicd from '../assets/icons/cicd.png';
 import jest from '../assets/icons/jest.png';
+import expo from '../assets/icons/expo.png';
+import android from '../assets/icons/android.png';
 
 //SE
 import sdlc from '../assets/icons/sdlc.png';
@@ -60,6 +63,7 @@ export const ICONS = {
     Firebase: firebase,
     MongoDB: mongodb,
     PostgreSQL: postgre,
+    'MS SQL Server': mssql,
 
     // Tools
     Git: git,
@@ -67,6 +71,8 @@ export const ICONS = {
     Figma: figma,
     'CI/CD': cicd,
     Jest : jest,
+    Expo : expo,
+    Android: android,
 
     // Software Engineering
     SDLC: sdlc,
