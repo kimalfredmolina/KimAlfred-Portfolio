@@ -6,6 +6,7 @@ import AboutPage from './components/AboutPage';
 import SkillsPage from './components/SkillsPage';
 import ProjectsPage from './components/ProjectsPage';
 import AllProjectsPage from './components/AllProjectsPage';
+import CertificatesPage from './components/CertificatesPage';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -20,6 +21,7 @@ const App = () => {
             <AboutPage isDark={isDark} />
             <SkillsPage isDark={isDark} />
             <ProjectsPage isDark={isDark} />
+            <CertificatesPage isDark={isDark} />
           </>
         }
       />

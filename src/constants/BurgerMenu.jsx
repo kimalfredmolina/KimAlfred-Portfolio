@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, Code2, Menu, X, User, FolderOpenDot, FileBadge, Moon, Sun } from 'lucide-react'
+import { Home, Code2, Menu, X, User, FolderOpenDot, Award, Moon, Sun } from 'lucide-react'
 
 export default function BurgerMenu({
   isDark,
@@ -62,7 +62,7 @@ export default function BurgerMenu({
     { icon: User, section: 'about' },
     { icon: Code2, section: 'skills' },
     { icon: FolderOpenDot, section: 'projects' },
-    { icon: FileBadge, section: 'certificate' }
+    { icon: Award, section: 'certificates' }
   ]
 
   return (

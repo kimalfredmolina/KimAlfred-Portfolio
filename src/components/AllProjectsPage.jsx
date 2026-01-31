@@ -123,8 +123,8 @@ const AllProjectsPage = ({ isDark }) => {
                     className={`group rounded-lg overflow-hidden flex flex-col transition-all duration-300
                         ${
                         isDark
-                            ? 'bg-[#334155] border border-gray-700 hover:border-lime-400 hover:shadow-[0_0_0_1px_rgba(163,230,53,0.4)]'
-                            : 'bg-white border border-gray-200 hover:border-red-500 hover:shadow-[0_0_0_1px_rgba(239,68,68,0.35)]'
+                            ? 'bg-[#334155] border border-gray-700 hover:border-red-600 hover:shadow-[0_0_0_1px_rgba(239,68,68,0.35)]'
+                            : 'bg-white border border-gray-200 hover:border-red-600 hover:shadow-[0_0_0_1px_rgba(239,68,68,0.35)]'
                         }
                     `}
                     >

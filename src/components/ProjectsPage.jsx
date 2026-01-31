@@ -40,17 +40,16 @@ const ProjectsPage = ({ isDark }) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-90px" }}
-        className="max-w-7xl mx-auto px-6 py-20"
+        className="max-w-7xl mx-auto px-6 py-4"
       >
         {/* Section Header */}
         <motion.div
           variants={cardVariants}
           className="mb-12 text-center"
         >
-          <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="flex items-center justify-center gap-3 mb-3 text-red-600">
             <FolderOpenDot
               size={28}
-              className={isDark ? 'text-red-400' : 'text-red-600'}
             />
             <h2
               className={`text-3xl md:text-4xl font-bold ${
@@ -78,8 +77,8 @@ const ProjectsPage = ({ isDark }) => {
               className={`group rounded-lg overflow-hidden flex flex-col transition-all duration-300
                   ${
                     isDark
-                      ? 'bg-[#334155] border border-gray-700 hover:border-lime-400 hover:shadow-[0_0_0_1px_rgba(163,230,53,0.4)]'
-                      : 'bg-white border border-gray-200 hover:border-red-500 hover:shadow-[0_0_0_1px_rgba(239,68,68,0.35)]'
+                      ? 'bg-[#334155] border border-gray-700 hover:border-red-600 hover:shadow-[0_0_0_1px_rgba(239,68,68,0.35)]'
+                      : 'bg-white border border-gray-200 hover:border-red-600 hover:shadow-[0_0_0_1px_rgba(239,68,68,0.35)]'
                   }
               `}
             >
