@@ -16,20 +16,41 @@ export default function ProfileCard({ isDark, setIsDark }) {
   const fullName = "Kim Alfred Molina";
   const email = "kimalfredmolina1224@gmail.com";
 
-  // Typing animation effect
+ // Typing animation effect with erasing
   useEffect(() => {
     let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullName.length) {
+    let isDeleting = false;
+    let loopCount = 0;
+    
+    const typeWriter = () => {
+      const firstName = "Kim Alfred";
+      const fullName = "Kim Alfred Molina";
+      
+      if (!isDeleting && currentIndex <= fullName.length) {
+        // Typing forward
         setDisplayedText(fullName.slice(0, currentIndex));
         currentIndex++;
-      } else {
-        setIsTypingComplete(true);
-        clearInterval(typingInterval);
+        setTimeout(typeWriter, 150);
+      } else if (!isDeleting && currentIndex > fullName.length) {
+        // Pause at end before deleting
+        isDeleting = true;
+        setTimeout(typeWriter, 2500); //to pause at full name
+      } else if (isDeleting && currentIndex > firstName.length) {
+        // Deleting back to first name
+        currentIndex--;
+        setDisplayedText(fullName.slice(0, currentIndex));
+        setTimeout(typeWriter, 100); // Faster deletion
+      } else if (isDeleting && currentIndex === firstName.length) {
+        // Pause at first name before typing again
+        isDeleting = false;
+        loopCount++;
+        setTimeout(typeWriter, 1000); // Wait 1 second before typing again
       }
-    }, 150); // Typing speed
-
-    return () => clearInterval(typingInterval);
+      
+      setIsTypingComplete(!isDeleting && currentIndex === fullName.length);
+    };
+    
+    typeWriter();
   }, []);
 
   const handleCopyEmail = async () => {
