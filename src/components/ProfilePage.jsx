@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Moon, Sun, Download } from 'lucide-react';
 import Profile from '../assets/kim2.jpg'
@@ -10,7 +10,27 @@ export default function ProfileCard({ isDark, setIsDark }) {
 
   const [copied, setCopied] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  
+  const fullName = "Kim Alfred Molina";
   const email = "kimalfredmolina1224@gmail.com";
+
+  // Typing animation effect
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullName.length) {
+        setDisplayedText(fullName.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        setIsTypingComplete(true);
+        clearInterval(typingInterval);
+      }
+    }, 150); // Typing speed
+
+    return () => clearInterval(typingInterval);
+  }, []);
 
   const handleCopyEmail = async () => {
     await navigator.clipboard.writeText(email);
@@ -104,7 +124,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
             <div className="flex items-center gap-4">
               <div>
                 <h1 className={`text-4xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  Kim Alfred Molina
+                  {displayedText}
+                  <span className={`inline-block w-4 h-1 ml-1 ${isDark ? 'bg-white' : 'bg-gray-900'} ${isTypingComplete ? 'animate-pulse' : ''}`}></span>
                 </h1>
                 <p className={`text-lg font-semibold ${isDark ? 'text-red-400' : 'text-red-600'}`}>
                   Full Stack Developer
@@ -168,20 +189,20 @@ export default function ProfileCard({ isDark, setIsDark }) {
             </div>
 
             {/* Download Button - Right Side */}
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+            <a
+              href={cv}
+              download="Kim_Alfred_Molina_Resume.pdf"
               className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg"
             >
-              {/* Link for downloading Resume */}
-              <a
-                href={cv}
-                download="Kim_Alfred_Resume.pdf"
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
                   isDark
                     ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
                     : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                }`}>
+                }`}
+              >
                 {/* Text */}
                 <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
                   <Download size={18} />
@@ -191,8 +212,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                   <Download size={22} />
                 </span>
-              </a>
-            </motion.div>
+              </motion.div>
+            </a>
           </div>
         </motion.div>
       </motion.div>
