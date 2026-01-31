@@ -33,6 +33,8 @@ import cicd from '../assets/icons/cicd.png';
 import jest from '../assets/icons/jest.png';
 import expo from '../assets/icons/expo.png';
 import android from '../assets/icons/android.png';
+import clickup from '../assets/icons/clickup.png';
+import actions from '../assets/icons/actions.png';
 
 //SE
 import sdlc from '../assets/icons/sdlc.png';
@@ -68,11 +70,13 @@ export const ICONS = {
     // Tools
     Git: git,
     Github: github,
+    'Github Actions': actions,
     Figma: figma,
     'CI/CD': cicd,
     Jest : jest,
     Expo : expo,
     Android: android,
+    ClickUp: clickup,
 
     // Software Engineering
     SDLC: sdlc,

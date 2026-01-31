@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Code2 } from 'lucide-react';
+import { ExternalLink, Github, FolderOpenDot } from 'lucide-react';
 import { getIconPath } from '../constants/icons';
 import { projects } from '../constants/projects'
 
@@ -47,7 +47,7 @@ const ProjectsPage = ({ isDark }) => {
           className="mb-12 text-center"
         >
           <div className="flex items-center justify-center gap-3 mb-3">
-            <Code2
+            <FolderOpenDot
               size={28}
               className={isDark ? 'text-red-400' : 'text-red-600'}
             />
@@ -89,7 +89,7 @@ const ProjectsPage = ({ isDark }) => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t to-transparent" />
               </div>
 
               {/* Project Content */}

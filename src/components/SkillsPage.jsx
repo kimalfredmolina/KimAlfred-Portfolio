@@ -60,10 +60,12 @@ const SkillsPage = ({ isDark }) => {
     '• DevOps / Tools': [
         { name: 'Git' },
         { name: 'Github' },
+        { name: 'Github Actions' },
         { name: 'Figma' },
         { name: 'CI/CD' },
         { name: 'Jest' },
         { name: 'Expo' },
+        { name: 'ClickUp' },
     ],
     '• Software Engineering': [
         { name: 'SDLC' },

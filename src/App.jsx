@@ -8,7 +8,7 @@ const App = () => {
   const [isDark, setIsDark] = useState(true);
 
   return (
-    <div className="relative min-h-screen">
+    <div>
       <div className="relative z-10">       
           <ProfilePage isDark={isDark} setIsDark={setIsDark} />
           <AboutPage isDark={isDark} />
