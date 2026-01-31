@@ -31,7 +31,7 @@ export const projects = [
     title: "EMC Training Portal Website",
     description:
       "This Raspberry Pi-based system integrates a fingerprint sensor (R307) and webcam to automate activity monitoring. Users register with their personal details and fingerprint, which are securely stored in Firebase.",
-    technologies: ["React.js", "Tailwind CSS", "Firebase"],
+    technologies: ["JavaScript", "React.js", "Tailwind CSS", "Firebase"],
     github: "https://github.com/kimalfredmolina",
     demo: "https://emctrainingportal.online/login",
     image: emc
@@ -61,7 +61,7 @@ export const projects = [
     title: "Lumina Insight AI Mental Health Therapy",
     description:
       "A Web Base AI Integration system with a voice recognition for user and text-to-voice responds of AI (Gemini API)",
-    technologies: ["React.js", "Tailwind CSS"],
+    technologies: ["JavaScript", "React.js", "Tailwind CSS"],
     github: "https://github.com/kimalfredmolina/Lumina-Insight-AI-Mental-Health-Therapy",
     demo: "https://lumina-insight-ai-mental-health-therapy.vercel.app/",
     image: webai
@@ -71,7 +71,7 @@ export const projects = [
     title: "Kim Alfred Portfolio Website",
     description:
       "My Personal Portfolio Website using ReactJS and TailwindCSS",
-    technologies: ["React.js", "Tailwind CSS"],
+    technologies: ["JavaScript", "React.js", "Tailwind CSS"],
     github: "https://github.com/kimalfredmolina/KimAlfred-Portfolio",
     demo: "https://kim-alfred-portfolio.vercel.app/",
     image: portfolio
@@ -121,7 +121,7 @@ export const projects = [
     title: "Travel Blog Website",
     description:
       "Simple Philippine Travel Blog website, showcasing beautiful and most tourist attractions in the Philippines.",
-    technologies: ["React.js", "Tailwind CSS"],
+    technologies: ["JavaScript", "React.js", "Tailwind CSS"],
     github: "https://github.com/kimalfredmolina/Travel-Blog",
     demo: "https://travel-blog-tau-one.vercel.app/",
     image: blog
@@ -131,7 +131,7 @@ export const projects = [
     title: "TCU CICT Lounge",
     description:
       "TCU CICT Lounge is an online platform for TCU CICT student to communicate, share ideas, and access resources related to their academic journey.",
-    technologies: ["React.js", "Tailwind CSS", "Django", "PostgreSQL"],
+    technologies: ["JavaScript", "React.js", "Tailwind CSS", "Django", "PostgreSQL"],
     github: "https://github.com/kimalfredmolina/TCU-CICT-Lounge",
     demo: "https://github.com/kimalfredmolina",
     image: chatroom

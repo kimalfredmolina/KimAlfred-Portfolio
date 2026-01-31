@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, FolderOpenDot } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, FolderOpenDot } from 'lucide-react';
 import { getIconPath } from '../constants/icons';
 import { projects } from '../constants/projects'
 
@@ -64,13 +65,13 @@ const ProjectsPage = ({ isDark }) => {
               isDark ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
-            A collection of projects showcasing my skills in full-stack development
+            Featured projects showcasing my development skills and experience
           </p>
         </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {projects.slice(0, 3).map((project) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
@@ -168,26 +169,31 @@ const ProjectsPage = ({ isDark }) => {
           ))}
         </div>
 
-        {/* View More Section */}
-        <motion.div
-          variants={cardVariants}
-          className="mt-12 text-center"
-        >
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="https://github.com/kimalfredmolina"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-colors duration-300 ${
-              isDark
-                ? 'bg-neutral-950 text-neutral-200 border border-gray-600 hover:bg-neutral-900'
-                : 'bg-neutral-900 text-neutral-100 border border-gray-300 hover:bg-neutral-800'
-            }`}
+        {/* View All My Projects Button */}
+        <motion.div variants={cardVariants} className="mt-12 text-center">
+          <Link
+            to="/allprojects"
+            className={`group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium transition-colors duration-500
+              ${
+                isDark
+                  ? 'bg-neutral-950 text-neutral-200 hover:bg-neutral-900'
+                  : 'bg-neutral-900 text-neutral-100 hover:bg-neutral-800'
+              }`}
           >
-            <Github size={18} />
-            View More on GitHub
-          </motion.a>
+            {/* Default Content */}
+            <div className="flex items-center gap-2 translate-x-0 opacity-100 transition-all duration-500
+                            group-hover:-translate-x-[150%] group-hover:opacity-0">
+              <FolderOpenDot size={18} />
+              <span>View All My Projects</span>
+            </div>
+
+            {/* Hover Content */}
+            <div className="absolute flex items-center gap-2 translate-x-[150%] opacity-0 transition-all duration-500
+                            group-hover:translate-x-0 group-hover:opacity-100">
+              <span>Explore</span>
+              <ArrowRight size={20} />
+            </div>
+          </Link>
         </motion.div>
       </motion.div>
     </div>
