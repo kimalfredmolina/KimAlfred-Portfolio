@@ -21,7 +21,7 @@ export const projects = [
     title: "SnapNutrient - Nutrition Scanner App",
     description:
       "SnapNutrient is an intelligent mobile application developed to address this growing need by providing users with real-time dietary analysis and macronutrient estimation through advanced image recognition technology.",
-    technologies: ["React Native", "TypeScript", "Tailwind CSS", "Firebase", "Expo", "Jest", "CI/CD", "SDLC"],
+    technologies: ["TypeScript", "React Native", "Tailwind CSS", "Firebase", "Expo", "Jest", "CI/CD", "SDLC"],
     github: "https://github.com/kimalfredmolina/SnapNutrient_App",
     demo: "https://t.me/+8TwEgfD5V-RmZDc9",
     image: snap

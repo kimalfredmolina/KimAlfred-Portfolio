@@ -27,7 +27,7 @@ const SkillsPage = ({ isDark }) => {
   const cardBg = isDark ? 'bg-gradient-to-br from-[#2d3748] to-[#1e293b]' : 'bg-gradient-to-br from-white to-gray-50';
   const headingColor = isDark ? 'text-red-400' : 'text-red-600';
   const textColor = isDark ? 'text-gray-300' : 'text-gray-700';
-  const companyColor = isDark ? 'text-lime-400' : 'text-lime-600';
+  const companyColor = isDark ? 'text-lime-500' : 'text-red-600';
   const techBg = isDark ? 'bg-[#1f2937]' : 'bg-gray-100';
   const techText = isDark ? 'text-gray-300' : 'text-gray-700';
 
