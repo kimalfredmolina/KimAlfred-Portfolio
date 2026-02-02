@@ -110,10 +110,9 @@ const AllProjectsPage = ({ isDark }) => {
                     variants={cardVariants}
                     className="text-center mb-14"
                 >
-                    <div className="flex justify-center items-center gap-3 mb-3">
+                    <div className="flex justify-center items-center gap-3 mb-3 text-red-600">
                         <FolderOpenDot
                             size={30}
-                            className={isDark ? 'text-red-400' : 'text-red-600'}
                         />
                         <h1
                             className={`text-3xl md:text-4xl font-bold ${

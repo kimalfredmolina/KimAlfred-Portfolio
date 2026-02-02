@@ -7,6 +7,7 @@ import SkillsPage from './components/SkillsPage';
 import ProjectsPage from './components/ProjectsPage';
 import AllProjectsPage from './components/AllProjectsPage';
 import CertificatesPage from './components/CertificatesPage';
+import AllCertificatesPage from './components/AllCertificatesPage';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -29,6 +30,11 @@ const App = () => {
       <Route
         path="/allprojects"
         element={<AllProjectsPage isDark={isDark} />}
+      />
+
+      <Route
+        path="/allcertificates"
+        element={<AllCertificatesPage isDark={isDark} />}
       />
     </Routes>
   );
