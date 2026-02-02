@@ -142,7 +142,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
         {/* Profile Info */}
         <motion.div variants={itemVariants} className="mb-8">
           <div className="flex items-start justify-between">
-            <div className="flex items-center gap-4">
+            <div className="relative">
               <div>
                 <h1 className={`text-4xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {displayedText}
@@ -153,8 +153,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 </p>
               </div>
               
-              {/* Social Links */}
-              <div className="flex gap-2 ml-6">
+              {/* Social Links - Fixed Position */}
+              <div className="absolute top-0 left-[350px] flex gap-2">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
