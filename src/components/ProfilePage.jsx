@@ -141,7 +141,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
 
         {/* Profile Info */}
         <motion.div variants={itemVariants} className="mb-8">
-          <div className="flex items-start justify-between">
+          {/* Desktop Layout */}
+          <div className="hidden md:flex items-start justify-between">
             <div className="relative">
               <div>
                 <h1 className={`text-4xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -153,7 +154,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 </p>
               </div>
               
-              {/* Social Links - Fixed Position */}
+              {/* Social Links - Desktop Fixed Position */}
               <div className="absolute top-0 left-[350px] flex gap-2">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
@@ -209,11 +210,107 @@ export default function ProfileCard({ isDark, setIsDark }) {
               </div>
             </div>
 
-            {/* Download Button - Right Side */}
+            {/* Download Button - Desktop Right Side */}
             <a
               href={cv}
               download="Kim_Alfred_Molina_Resume.pdf"
               className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg"
+            >
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
+                  isDark
+                    ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
+                    : 'bg-neutral-900 text-neutral-100 border border-gray-300'
+                }`}
+              >
+                {/* Text */}
+                <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
+                  <Download size={18} />
+                  Download Resume
+                </span>
+                {/* Icon slides up */}
+                <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  <Download size={22} />
+                </span>
+              </motion.div>
+            </a>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="md:hidden flex flex-col">
+            {/* Name and Title */}
+            <div className="mb-4">
+              <h1 className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                {displayedText}
+                <span className={`inline-block w-3 h-1 ml-1 ${isDark ? 'bg-white' : 'bg-gray-900'} ${isTypingComplete ? 'animate-pulse' : ''}`}></span>
+              </h1>
+              <p className={`text-base font-semibold ${isDark ? 'text-red-400' : 'text-red-600'}`}>
+                4th Year Computer Science
+              </p>
+            </div>
+
+            {/* Social Links - Mobile */}
+            <div className="flex gap-2 mb-4">
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://github.com/kimalfredmolina"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-2.5 rounded-full transition-colors duration-300 ${
+                  isDark 
+                    ? 'bg-[#334155] hover:bg-[#475569] text-white' 
+                    : 'bg-gray-800 hover:bg-gray-900 text-white'
+                }`}
+              >
+                <Github size={18} />
+              </motion.a>
+              
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://www.linkedin.com/in/kim-alfred-molina-323455276/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-300"
+              >
+                <Linkedin size={18} />
+              </motion.a>
+
+              <div className="relative">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={handleCopyEmail}
+                  className="p-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors duration-300"
+                >
+                  <Mail size={18} />
+                </motion.button>
+
+                <AnimatePresence>
+                  {copied && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 6 }}
+                      className={`absolute -bottom-10 left-1/2 -translate-x-1/2
+                        whitespace-nowrap text-xs px-3 py-1 rounded-md shadow-md z-10
+                        ${isDark ? 'bg-black text-white' : 'bg-gray-900 text-white'}`}
+                    >
+                      Email copied!
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Download Button - Mobile Full Width */}
+            <a
+              href={cv}
+              download="Kim_Alfred_Molina_Resume.pdf"
+              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg w-full"
             >
               <motion.div
                 whileHover={{ scale: 1.03 }}
