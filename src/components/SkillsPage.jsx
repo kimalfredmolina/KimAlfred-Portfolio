@@ -49,6 +49,7 @@ const SkillsPage = ({ isDark }) => {
         { name: 'Tailwind CSS' },
         { name: 'Django' },
         { name: 'Node.js' },
+        { name: 'Express.js' },
     ],
     '• Database Management': [
         { name: 'MySQL' },
@@ -57,15 +58,18 @@ const SkillsPage = ({ isDark }) => {
         { name: 'PostgreSQL' },
 
     ],
-    '• DevOps / Tools': [
+    '• Tools': [
         { name: 'Git' },
         { name: 'Github' },
-        { name: 'Github Actions' },
         { name: 'Figma' },
-        { name: 'CI/CD' },
         { name: 'Jest' },
         { name: 'Expo' },
         { name: 'ClickUp' },
+    ],
+    '• DevOps': [
+        { name: 'Docker' },
+        { name: 'Github Actions' },
+        { name: 'CI/CD' },
     ],
     '• Software Engineering': [
         { name: 'SDLC' },

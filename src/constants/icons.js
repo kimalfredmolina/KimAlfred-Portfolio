@@ -17,6 +17,7 @@ import native from '../assets/icons/native.png';
 import tailwind from '../assets/icons/tailwind.png';
 import django from '../assets/icons/django.svg';
 import node from '../assets/icons/node.png';
+import express from '../assets/icons/express.png'
 
 // Databases
 import mysql from '../assets/icons/mysql.png';
@@ -35,6 +36,7 @@ import expo from '../assets/icons/expo.png';
 import android from '../assets/icons/android.png';
 import clickup from '../assets/icons/clickup.png';
 import actions from '../assets/icons/actions.png';
+import docker from '../assets/icons/docker.png'
 
 //SE
 import sdlc from '../assets/icons/sdlc.png';
@@ -58,7 +60,7 @@ export const ICONS = {
     'Tailwind CSS': tailwind,
     Django: django,
     'Node.js': node,
-    Express: node,
+    'Express.js': express,
 
     // Databases
     MySQL: mysql,
@@ -75,6 +77,7 @@ export const ICONS = {
     'CI/CD': cicd,
     Jest : jest,
     Expo : expo,
+    Docker: docker,
     Android: android,
     ClickUp: clickup,
 
