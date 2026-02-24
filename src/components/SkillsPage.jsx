@@ -50,6 +50,7 @@ const SkillsPage = ({ isDark }) => {
         { name: 'Django' },
         { name: 'Node.js' },
         { name: 'Express.js' },
+        { name: 'Next.js' },
     ],
     '• Database Management': [
         { name: 'MySQL' },

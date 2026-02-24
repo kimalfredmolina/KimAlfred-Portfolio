@@ -18,6 +18,7 @@ import tailwind from '../assets/icons/tailwind.png';
 import django from '../assets/icons/django.svg';
 import node from '../assets/icons/node.png';
 import express from '../assets/icons/express.png'
+import next from '../assets/icons/next.webp';
 
 // Databases
 import mysql from '../assets/icons/mysql.png';
@@ -61,6 +62,7 @@ export const ICONS = {
     Django: django,
     'Node.js': node,
     'Express.js': express,
+    'Next.js': next, 
 
     // Databases
     MySQL: mysql,
