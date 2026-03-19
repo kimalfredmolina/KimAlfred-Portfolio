@@ -1,5 +1,6 @@
 import snap from "../assets/projects/snap.jpg";
 import emc from "../assets/projects/emc.png";
+import tracker from "../assets/projects/ojttracker.png";
 import process from "../assets/projects/process.png";
 import buildify from "../assets/projects/buildify.png";
 import webai from "../assets/projects/webai.png";
@@ -48,6 +49,16 @@ export const projects = [
   },
   {
     id: 4,
+    title: "OJT Tracking App",
+    description:
+      "OJT Tracking System is a web-based application designed to help students manage and monitor their On-the-Job Training activities. It allows users to log daily attendance, record working hours, track tasks, and organize progress efficiently.",
+    technologies: ["JavaScript", "React.js", "Tailwind CSS", "Firebase", "Jest", "CI/CD", "SDLC"],
+    github: "https://github.com/kimalfredmolina/OJT-Tracking-App",
+    demo: "https://ojt-tracking-app-3893d.web.app/",
+    image: tracker
+  },
+  {
+    id: 5,
     title: "Buildify - Content Management System",
     description:
       "A dynamic website builder that empowers users to create stunning web pages with a block-based interface and real-time preview functionality.",
@@ -57,7 +68,7 @@ export const projects = [
     image: buildify
   },
   {
-    id: 5,
+    id: 6,
     title: "Lumina Insight AI Mental Health Therapy",
     description:
       "A Web Base AI Integration system with a voice recognition for user and text-to-voice responds of AI (Gemini API)",
@@ -67,7 +78,7 @@ export const projects = [
     image: webai
   },
   {
-    id: 6,
+    id: 7,
     title: "Kim Alfred Portfolio Website",
     description:
       "My Personal Portfolio Website using ReactJS and TailwindCSS",
@@ -77,7 +88,7 @@ export const projects = [
     image: portfolio
   },
   {
-    id: 7,
+    id: 8,
     title: "FitHub - Set Workout Tracker App",
     description:
       "FitHub - Set Workout Tracker is an Android app designed to help users organize and track their workout routines efficiently.",
@@ -87,7 +98,7 @@ export const projects = [
     image: fithub
   },
   {
-    id: 8,
+    id: 9,
     title: "TCU Document Management System",
     description:
       "TCU Document Management System is a comprehensive solution for managing and organizing documents within an organization.",
@@ -97,7 +108,7 @@ export const projects = [
     image: docu
   },
   {
-    id: 9,
+    id: 10,
     title: "Tonic and Trim Barbershop Booking System",
     description:
       "Tonic and Trim is a booking system for Barbershops that allows customers to schedule appointments, view available time slots, and manage bookings.",
@@ -107,7 +118,7 @@ export const projects = [
     image: bookingsys
   },
   {
-    id: 10,
+    id: 11,
     title: "Employee Management System",
     description:
       "The Employee Management System is a comprehensive application designed to manage various employee-related functions in an organization.",
@@ -117,7 +128,7 @@ export const projects = [
     image: empsys
   },
   {
-    id: 11,
+    id: 12,
     title: "Travel Blog Website",
     description:
       "Simple Philippine Travel Blog website, showcasing beautiful and most tourist attractions in the Philippines.",
@@ -127,7 +138,7 @@ export const projects = [
     image: blog
   },
   {
-    id: 12,
+    id: 13,
     title: "TCU CICT Lounge",
     description:
       "TCU CICT Lounge is an online platform for TCU CICT student to communicate, share ideas, and access resources related to their academic journey.",
@@ -137,7 +148,7 @@ export const projects = [
     image: chatroom
   },
   {
-    id: 13,
+    id: 14,
     title: "Command Prompt Tutorial Website",
     description:
       "Discover The Ease Of Mastering Command Prompt With Our Step-By-Step Tutorials On Our Website. Our User-Friendly Guides Make CMD Accessible To All Skill Levels.",
@@ -147,7 +158,7 @@ export const projects = [
     image: cmd
   },
   {
-    id: 14,
+    id: 15,
     title: "HorizontalX Operating System Design",
     description:
       "HorizonX is a groundbreaking advancement in user interfaces and system functionalities, seamlessly blending the best features of both Windows and Mac OS.",
@@ -157,7 +168,7 @@ export const projects = [
     image: horizon
   },
   {
-    id: 15,
+    id: 16,
     title: "Student Profile Management System",
     description:
       "Simple CRUD Student Profile Management System Using Django & HTML",
@@ -167,7 +178,7 @@ export const projects = [
     image: stud
   },
   {
-    id: 16,
+    id: 17,
     title: "Genshin Infograph Website",
     description:
       "Simple Genshin Character Infograph Website HTML, CSS, and Javascript",

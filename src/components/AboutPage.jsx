@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import { GitHubCalendar } from 'react-github-calendar';
@@ -30,11 +30,37 @@ const AboutPage = ({ isDark }) => {
   const currentYear = new Date().getFullYear();
   const [selectedYear, setSelectedYear] = useState(currentYear);
 
+  // Tooltip state
+  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, date: '', count: 0 });
+
+  // renderBlock is called by react-github-calendar for each day square.
+  // It receives the <rect> element and the Activity object { date, count, level }.
+  // We clone the rect and attach proper mouse handlers with real data.
+  const renderBlock = useCallback(
+    (block, activity) => {
+      return React.cloneElement(block, {
+        onMouseEnter: (e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          setTooltip({
+            visible: true,
+            x: rect.left + rect.width / 2,
+            y: rect.top - 10,
+            date: activity.date,
+            count: activity.count,
+          });
+        },
+        onMouseLeave: () => {
+          setTooltip((prev) => ({ ...prev, visible: false }));
+        },
+      });
+    },
+    []
+  );
+
   return (
     <div
-      id="about" className={`transition-colors duration-500 ${
-        isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
-      }`}
+      id="about"
+      className={`transition-colors duration-500 ${isDark ? 'bg-[#1e293b]' : 'bg-gray-50'}`}
     >
       <motion.div
         variants={containerVariants}
@@ -49,26 +75,24 @@ const AboutPage = ({ isDark }) => {
           transition={{ duration: 0.5 }}
           whileHover={{ y: -4 }}
           className={`relative p-7 rounded-2xl ${cardBg} ${
-            isDark 
-              ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]' 
+            isDark
+              ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]'
               : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]'
           } transition-all duration-300 overflow-hidden`}
         >
-          {/* Accent line */}
-          <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
-            isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
-          }`} />
-          
-          <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>
-            About Me
-          </h2>
-
+          <div
+            className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
+              isDark
+                ? 'bg-gradient-to-b from-lime-400 to-lime-500'
+                : 'bg-gradient-to-b from-red-500 to-red-600'
+            }`}
+          />
+          <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>About Me</h2>
           <div className={`space-y-3 ${textColor}`}>
             <p className="text-sm leading-relaxed">
-              Computer Science student with experience in full-stack web and
-              mobile development. Skilled in building responsive interfaces,
-              managing databases, developing application features, and improving
-              UI/UX using React, React Native, Firebase, and modern web
+              Computer Science student with experience in full-stack web and mobile development.
+              Skilled in building responsive interfaces, managing databases, developing application
+              features, and improving UI/UX using React, React Native, Firebase, and modern web
               technologies.
             </p>
           </div>
@@ -83,20 +107,19 @@ const AboutPage = ({ isDark }) => {
             transition={{ duration: 0.5 }}
             whileHover={{ y: -4 }}
             className={`relative p-7 rounded-2xl ${cardBg} ${
-              isDark 
-                ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]' 
+              isDark
+                ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]'
                 : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]'
             } transition-all duration-300 overflow-hidden`}
           >
-            {/* Accent line */}
-            <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
-              isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
-            }`} />
-            
-            <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>
-              Education
-            </h2>
-
+            <div
+              className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
+                isDark
+                  ? 'bg-gradient-to-b from-lime-400 to-lime-500'
+                  : 'bg-gradient-to-b from-red-500 to-red-600'
+              }`}
+            />
+            <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>Education</h2>
             <div className={`space-y-2 ${textColor}`}>
               <p className="font-semibold text-lg leading-tight">
                 Bachelor of Science in Computer Science
@@ -104,13 +127,14 @@ const AboutPage = ({ isDark }) => {
               <p className={`text-md ${isDark ? 'text-red-400' : 'text-red-500'} font-medium`}>
                 Taguig City University
               </p>
-
               <div className="pt-2">
-                <span className={`inline-flex items-center text-sm font-semibold ${
-                  isDark 
-                    ? 'text-gray-900 bg-gradient-to-r from-lime-400 to-lime-500' 
-                    : 'text-white bg-gradient-to-r from-red-500 to-red-600'
-                } px-4 py-1.5 rounded-full shadow-md`}>
+                <span
+                  className={`inline-flex items-center text-sm font-semibold ${
+                    isDark
+                      ? 'text-gray-900 bg-gradient-to-r from-lime-400 to-lime-500'
+                      : 'text-white bg-gradient-to-r from-red-500 to-red-600'
+                  } px-4 py-1.5 rounded-full shadow-md`}
+                >
                   2022 – 2026
                 </span>
               </div>
@@ -124,46 +148,41 @@ const AboutPage = ({ isDark }) => {
             transition={{ duration: 0.5 }}
             whileHover={{ y: -4 }}
             className={`relative p-7 rounded-2xl ${cardBg} ${
-              isDark 
-                ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]' 
+              isDark
+                ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.5)]'
                 : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]'
             } transition-all duration-300 overflow-hidden`}
           >
-            {/* Accent line */}
-            <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
-              isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
-            }`} />
-            
-            <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>
-              Contact
-            </h2>
-
+            <div
+              className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${
+                isDark
+                  ? 'bg-gradient-to-b from-lime-400 to-lime-500'
+                  : 'bg-gradient-to-b from-red-500 to-red-600'
+              }`}
+            />
+            <h2 className={`text-xl font-bold mb-5 ${headingColor} tracking-tight`}>Contact</h2>
             <div className="space-y-3">
-              <motion.div 
-                whileHover={{ x: 4 }}
-                className="flex items-center gap-3 group"
-              >
-                <div className={`p-2.5 rounded-xl ${
-                  isDark 
-                    ? 'bg-gradient-to-br from-lime-400 to-lime-500' 
-                    : 'bg-gradient-to-br from-red-500 to-red-600'
-                } shadow-md group-hover:shadow-lg transition-shadow duration-300`}>
+              <motion.div whileHover={{ x: 4 }} className="flex items-center gap-3 group">
+                <div
+                  className={`p-2.5 rounded-xl ${
+                    isDark
+                      ? 'bg-gradient-to-br from-lime-400 to-lime-500'
+                      : 'bg-gradient-to-br from-red-500 to-red-600'
+                  } shadow-md group-hover:shadow-lg transition-shadow duration-300`}
+                >
                   <Phone size={16} className={isDark ? 'text-gray-900' : 'text-white'} />
                 </div>
-                <span className={`text-sm ${textColor} font-medium`}>
-                  +63 927 732 4896
-                </span>
+                <span className={`text-sm ${textColor} font-medium`}>+63 927 732 4896</span>
               </motion.div>
 
-              <motion.div 
-                whileHover={{ x: 4 }}
-                className="flex items-center gap-3 group"
-              >
-                <div className={`p-2.5 rounded-xl ${
-                  isDark 
-                    ? 'bg-gradient-to-br from-lime-400 to-lime-500' 
-                    : 'bg-gradient-to-br from-red-500 to-red-600'
-                } shadow-md group-hover:shadow-lg transition-shadow duration-300`}>
+              <motion.div whileHover={{ x: 4 }} className="flex items-center gap-3 group">
+                <div
+                  className={`p-2.5 rounded-xl ${
+                    isDark
+                      ? 'bg-gradient-to-br from-lime-400 to-lime-500'
+                      : 'bg-gradient-to-br from-red-500 to-red-600'
+                  } shadow-md group-hover:shadow-lg transition-shadow duration-300`}
+                >
                   <Mail size={16} className={isDark ? 'text-gray-900' : 'text-white'} />
                 </div>
                 <span className={`text-sm ${textColor} font-medium`}>
@@ -186,16 +205,19 @@ const AboutPage = ({ isDark }) => {
         <motion.div
           variants={itemVariants}
           className={`relative p-8 rounded-2xl ${cardBg} ${
-            isDark 
-              ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)]' 
+            isDark
+              ? 'shadow-[0_8px_30px_rgb(0,0,0,0.4)]'
               : 'shadow-[0_2px_20px_rgba(0,0,0,0.06)]'
           } overflow-hidden`}
         >
-          {/* Accent line */}
-          <div className={`absolute top-4 left-0 w-1 h-20 rounded-r-full ${
-            isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'
-          }`} />
-          
+          <div
+            className={`absolute top-4 left-0 w-1 h-20 rounded-r-full ${
+              isDark
+                ? 'bg-gradient-to-b from-lime-400 to-lime-500'
+                : 'bg-gradient-to-b from-red-500 to-red-600'
+            }`}
+          />
+
           {/* Header with Year Selector */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-6">
             <div>
@@ -203,7 +225,9 @@ const AboutPage = ({ isDark }) => {
                 GitHub Activity
               </h2>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                {selectedYear === currentYear ? 'Current year activity' : `Activity for ${selectedYear}`}
+                {selectedYear === currentYear
+                  ? 'Current year activity'
+                  : `Activity for ${selectedYear}`}
               </p>
             </div>
 
@@ -222,8 +246,8 @@ const AboutPage = ({ isDark }) => {
                           ? 'bg-gradient-to-r from-lime-400 to-lime-500 text-gray-900 shadow-lg'
                           : 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg'
                         : isDark
-                          ? 'bg-[#1f2937] text-gray-300 hover:bg-[#374151] shadow-md'
-                          : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                        ? 'bg-[#1f2937] text-gray-300 hover:bg-[#374151] shadow-md'
+                        : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
                     }`}
                 >
                   {year}
@@ -244,17 +268,16 @@ const AboutPage = ({ isDark }) => {
                 className="absolute inset-0 w-full"
               >
                 {/* Desktop */}
-                <div className="hidden md:block">
-                  <div className="flex justify-center">
-                    <GitHubCalendar
-                      username="kimalfredmolina"
-                      year={selectedYear}
-                      colorScheme={isDark ? 'dark' : 'light'}
-                      blockSize={12}
-                      blockMargin={4}
-                      fontSize={13}
-                    />
-                  </div>
+                <div className="hidden md:flex justify-center">
+                  <GitHubCalendar
+                    username="kimalfredmolina"
+                    year={selectedYear}
+                    colorScheme={isDark ? 'dark' : 'light'}
+                    blockSize={12}
+                    blockMargin={4}
+                    fontSize={13}
+                    renderBlock={renderBlock}
+                  />
                 </div>
 
                 {/* Tablet */}
@@ -267,6 +290,7 @@ const AboutPage = ({ isDark }) => {
                       blockSize={11}
                       blockMargin={3}
                       fontSize={13}
+                      renderBlock={renderBlock}
                     />
                   </div>
                 </div>
@@ -281,11 +305,32 @@ const AboutPage = ({ isDark }) => {
                       blockSize={11}
                       blockMargin={3}
                       fontSize={12}
+                      renderBlock={renderBlock}
                     />
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
+
+            {/* Tooltip — rendered at fixed viewport position */}
+            {tooltip.visible && (
+              <div
+                className={`fixed px-3 py-2 rounded-lg text-sm font-medium pointer-events-none z-50 ${
+                  isDark
+                    ? 'bg-gray-900 text-gray-100 border border-lime-400'
+                    : 'bg-gray-800 text-white border border-red-500'
+                }`}
+                style={{
+                  left: `${tooltip.x}px`,
+                  top: `${tooltip.y}px`,
+                  transform: 'translate(-50%, -100%)',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                <div>{tooltip.date}</div>
+                <div>{tooltip.count} contribution{tooltip.count !== 1 ? 's' : ''}</div>
+              </div>
+            )}
           </div>
         </motion.div>
       </motion.div>
