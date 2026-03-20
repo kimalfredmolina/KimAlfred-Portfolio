@@ -64,7 +64,7 @@ const ProjectsPage = ({ isDark }) => {
               isDark ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
-            Featured projects showcasing my development skills and experience
+            Personal projects and collaborative work where I contributed to building and designing websites, showcasing my development skills and experience.
           </p>
         </motion.div>
 

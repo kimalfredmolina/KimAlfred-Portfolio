@@ -127,7 +127,7 @@ const AllProjectsPage = ({ isDark }) => {
                             isDark ? 'text-gray-400' : 'text-gray-600'
                         }`}
                     >
-                        Full collection of my development work
+                        Personal projects and collaborative work where I contributed to building and designing websites, showcasing my development skills and experience.
                     </p>
                 </motion.div>
 

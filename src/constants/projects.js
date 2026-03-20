@@ -142,7 +142,7 @@ export const projects = [
     title: "TCU CICT Lounge",
     description:
       "TCU CICT Lounge is an online platform for TCU CICT student to communicate, share ideas, and access resources related to their academic journey.",
-    technologies: ["JavaScript", "React.js", "Tailwind CSS", "Django", "PostgreSQL"],
+    technologies: ["JavaScript", "React.js", "Tailwind CSS", "Django", "PostgreSQL", "SDLC"],
     github: "https://github.com/kimalfredmolina/TCU-CICT-Lounge",
     demo: "https://github.com/kimalfredmolina",
     image: chatroom
