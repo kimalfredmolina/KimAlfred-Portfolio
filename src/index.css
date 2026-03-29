@@ -23,3 +23,23 @@ body {
 #root {
     min-height: 100%;
 }
+
+.dropdown-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(239, 68, 68, 0.8) transparent;
+}
+
+.dropdown-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dropdown-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(239, 68, 68, 0.8);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}

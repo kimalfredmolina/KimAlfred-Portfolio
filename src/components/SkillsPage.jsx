@@ -38,7 +38,7 @@ const SkillsPage = ({ isDark }) => {
       { name: 'MySQL' }, { name: 'Firebase' }, { name: 'MongoDB' }, { name: 'PostgreSQL' },
     ],
     '• Tools': [
-      { name: 'Git' }, { name: 'Github' }, { name: 'Figma' },
+      { name: 'Git' }, { name: 'Github' }, { name: 'Postman' }, { name: 'Figma' },
       { name: 'Jest' }, { name: 'Expo' }, { name: 'ClickUp' },
     ],
     '• DevOps': [

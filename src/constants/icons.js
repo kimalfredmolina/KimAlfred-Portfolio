@@ -23,7 +23,7 @@ import next from '../assets/icons/next.webp';
 // Databases
 import mysql from '../assets/icons/mysql.png';
 import firebase from '../assets/icons/firebase.png';
-import mongodb from '../assets/icons/mongodb.png';
+import mongodb from '../assets/icons/mongodb.svg';
 import postgre from '../assets/icons/postgre.png';
 import mssql from '../assets/icons/mssql.png';
 
@@ -37,7 +37,8 @@ import expo from '../assets/icons/expo.png';
 import android from '../assets/icons/android.png';
 import clickup from '../assets/icons/clickup.png';
 import actions from '../assets/icons/actions.png';
-import docker from '../assets/icons/docker.png'
+import docker from '../assets/icons/docker.png';
+import postman from '../assets/icons/postman.svg';
 
 //SE
 import sdlc from '../assets/icons/sdlc.png';
@@ -82,6 +83,7 @@ export const ICONS = {
     Docker: docker,
     Android: android,
     ClickUp: clickup,
+    Postman: postman,
 
     // Software Engineering
     SDLC: sdlc,
