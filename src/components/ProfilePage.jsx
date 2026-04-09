@@ -107,7 +107,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-7xl mx-auto px-6 py-12"
+        className="max-w-7xl mx-auto px-6 pt-12 pb-4"
       >
         {/* Banner Section */}
         <motion.div
@@ -140,7 +140,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
         </motion.div>
 
         {/* Profile Info */}
-        <motion.div variants={itemVariants} className="mb-8">
+        <motion.div variants={itemVariants}>
           {/* Desktop Layout */}
           <div className="hidden md:flex items-start justify-between">
             <div className="relative">

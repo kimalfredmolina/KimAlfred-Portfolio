@@ -193,7 +193,7 @@ const CertificatesPage = ({ isDark }) => {
             <div className="flex items-center gap-2 translate-x-0 opacity-100 transition-all duration-500
                             group-hover:-translate-x-[150%] group-hover:opacity-0">
               <Award size={18} />
-              <span>View All my Certificates</span>
+              <span>View all my Certificates</span>
             </div>
 
             {/* Hover Content */}

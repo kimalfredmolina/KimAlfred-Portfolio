@@ -46,7 +46,7 @@ const AboutPage = ({ isDark }) => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-7xl mx-auto px-6 py-6 space-y-4"
+        className="max-w-7xl mx-auto px-6 py-4 space-y-4"
       >
         {/* About Me + Right column */}
         <div className="grid lg:grid-cols-2 gap-4">

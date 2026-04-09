@@ -58,7 +58,7 @@ const SkillsPage = ({ isDark }) => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-2 gap-6 items-start"
+        className="max-w-7xl mx-auto px-6 pt-0.5 pb-6 grid lg:grid-cols-2 gap-4 items-start"
       >
         {/* ── Skills Card ── */}
         <motion.div

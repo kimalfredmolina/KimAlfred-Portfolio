@@ -183,7 +183,7 @@ const ProjectsPage = ({ isDark }) => {
             <div className="flex items-center gap-2 translate-x-0 opacity-100 transition-all duration-500
                             group-hover:-translate-x-[150%] group-hover:opacity-0">
               <FolderOpenDot size={18} />
-              <span>View All My Projects</span>
+              <span>View all my Projects</span>
             </div>
 
             {/* Hover Content */}
