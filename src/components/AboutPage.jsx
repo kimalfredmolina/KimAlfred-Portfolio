@@ -1,6 +1,15 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, MapPin, GraduationCap, User, Github } from 'lucide-react';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  GraduationCap,
+  User,
+  Github,
+  Music2,
+} from 'lucide-react';
 import { GitHubCalendar } from 'react-github-calendar';
 
 const AboutPage = ({ isDark }) => {
@@ -65,28 +74,84 @@ const AboutPage = ({ isDark }) => {
           >
             <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'}`} />
 
-            <div className="flex items-center gap-2 mb-4">
-              <div className={`p-1.5 rounded-lg shadow-sm ${isDark ? 'bg-gradient-to-br from-lime-400 to-lime-500' : 'bg-gradient-to-br from-red-500 to-red-600'}`}>
-                <User size={13} className={isDark ? 'text-gray-900' : 'text-white'} />
+            {/* Header row */}
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-2">
+                <div className={`p-1.5 rounded-lg shadow-sm ${isDark ? 'bg-gradient-to-br from-lime-400 to-lime-500' : 'bg-gradient-to-br from-red-500 to-red-600'}`}>
+                  <User size={13} className={isDark ? 'text-gray-900' : 'text-white'} />
+                </div>
+                <span className={`text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>About Me</span>
               </div>
-              <span className={`text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>About Me</span>
+
+              <span className={`flex items-center gap-1.5 text-[10px] font-bold px-2.5 py-1 rounded-full
+                ${isDark ? 'bg-lime-400/10 text-lime-400 border border-lime-400/20' : 'bg-green-50 text-green-600 border border-green-200'}`}>
+                <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${isDark ? 'bg-lime-400' : 'bg-green-500'}`} />
+                Open to work
+              </span>
             </div>
 
-            <h2 className={`text-xl font-bold mb-1 tracking-tight ${isDark ? 'text-red-400' : 'text-red-600'}`}>
-              Hi, I'm Kim Alfred 👋
-            </h2>
-            <p className={`text-xs font-semibold mb-4 ${isDark ? 'text-lime-400' : 'text-red-500'}`}>
-              Full-Stack Developer · CS Student
-            </p>
+            {/* Avatar + name */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className={`relative w-14 h-14 rounded-2xl flex items-center justify-center text-base font-black shadow-lg flex-shrink-0
+                ${isDark ? 'bg-gradient-to-br from-lime-400 to-emerald-500 text-gray-900' : 'bg-gradient-to-br from-red-500 to-orange-500 text-white'}`}>
+                KA
+                <span className="absolute -bottom-1.5 -right-1.5 text-lg leading-none">👋</span>
+              </div>
+              <div>
+                <h2 className={`text-xl font-black tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                  Kim Alfred
+                </h2>
+                <p className={`text-xs font-semibold ${isDark ? 'text-lime-400' : 'text-red-500'}`}>
+                  Full-Stack Developer · CS Student
+                </p>
+              </div>
+            </div>
 
-            <div className={`border-t mb-4 ${isDark ? 'border-white/10' : 'border-gray-100'}`} />
+            <div className={`border-t mb-5 ${isDark ? 'border-white/10' : 'border-gray-100'}`} />
 
-            <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Computer Science student with experience in full-stack web and mobile development.
-              Skilled in building responsive interfaces, managing databases, developing application
-              features, and improving UI/UX using React, React Native, Firebase, and modern web
-              technologies.
-            </p>
+            {/* Description */}
+            <div className="mb-6">
+              <p className={`text-sm leading-[1.85] ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                Hi there. I'm a Computer Science student at Taguig City University with a passion for
+                building things that live on the internet.
+              </p>
+
+              <p className={`text-sm leading-[1.85] mt-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                I'm currently an intern at Inspire Holdings Inc., where I gain hands-on experience
+                working on real-world projects and improving my development workflow in a professional
+                environment. I enjoy creating products where design and engineering come together seamlessly.
+              </p>
+            </div>
+
+            <div className={`border-t pt-5 ${isDark ? 'border-white/10' : 'border-gray-100'}`}>
+              {/* Minimalist contacts */}
+              <div className="space-y-3">
+                {[
+                  { icon: Phone, label: '+63 927 732 4896', href: 'tel:+639277324896', sublabel: 'Call or text' },
+                  { icon: Mail, label: 'kimalfredmolina1224@gmail.com', href: 'mailto:kimalfredmolina1224@gmail.com', sublabel: 'Email' },
+                ].map(({ icon: Icon, label, href, sublabel }) => (
+                  <motion.a
+                    key={label}
+                    href={href}
+                    whileHover={{ x: 3 }}
+                    className="flex items-center justify-between group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Icon
+                        size={14}
+                        className={`flex-shrink-0 ${isDark ? 'text-gray-500 group-hover:text-lime-400' : 'text-gray-400 group-hover:text-red-500'} transition-colors duration-200`}
+                      />
+                      <span className={`text-sm truncate ${isDark ? 'text-gray-300 group-hover:text-white' : 'text-gray-600 group-hover:text-gray-900'} transition-colors duration-200`}>
+                        {label}
+                      </span>
+                    </div>
+                    <span className={`text-[10px] ml-3 flex-shrink-0 ${isDark ? 'text-gray-600' : 'text-gray-400'}`}>
+                      {sublabel}
+                    </span>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           {/* Right column */}
@@ -136,7 +201,7 @@ const AboutPage = ({ isDark }) => {
               </div>
             </motion.div>
 
-            {/* Contact */}
+            {/* Spotify */}
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 20 }}
@@ -150,27 +215,51 @@ const AboutPage = ({ isDark }) => {
             >
               <div className={`absolute top-4 left-0 w-1 h-16 rounded-r-full ${isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'}`} />
 
-              <div className="flex items-center gap-2 mb-5">
-                <div className={`p-1.5 rounded-lg shadow-sm ${isDark ? 'bg-gradient-to-br from-lime-400 to-lime-500' : 'bg-gradient-to-br from-red-500 to-red-600'}`}>
-                  <Mail size={13} className={isDark ? 'text-gray-900' : 'text-white'} />
+              <style>{`
+                @keyframes musicBounce {
+                  0%, 100% { transform: scaleY(0.4); }
+                  50% { transform: scaleY(1); }
+                }
+              `}</style>
+
+              <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center gap-2">
+                  <div className={`p-1.5 rounded-lg shadow-sm ${isDark ? 'bg-gradient-to-br from-lime-400 to-lime-500' : 'bg-gradient-to-br from-red-500 to-red-600'}`}>
+                    <Music2 size={13} className={isDark ? 'text-gray-900' : 'text-white'} />
+                  </div>
+                  <div>
+                    <span className={`text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                      Playlist while coding
+                    </span>
+                    <p className={`text-[10px] mt-0.5 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                      what&apos;s on loop rn 🎧
+                    </p>
+                  </div>
                 </div>
-                <span className={`text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Contact</span>
+
+                <div className="flex items-end gap-[3px] h-5">
+                  {[0.9, 1.3, 0.7, 1.1, 0.85].map((duration, i) => (
+                    <div
+                      key={i}
+                      className={`w-[3px] rounded-full origin-bottom ${isDark ? 'bg-lime-400' : 'bg-red-500'}`}
+                      style={{
+                        height: `${[55, 100, 40, 80, 60][i]}%`,
+                        animation: `musicBounce ${duration}s ease-in-out infinite`,
+                        animationDelay: `${i * 0.15}s`,
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
 
-              <div className="space-y-3">
-                {[
-                  { icon: Phone, label: '+63 927 732 4896' },
-                  { icon: Mail,  label: 'kimalfredmolina1224@gmail.com' },
-                ].map(({ icon: Icon, label }) => (
-                  <motion.div key={label} whileHover={{ x: 4 }} className="flex items-center gap-3 group">
-                    <div className={`p-2 rounded-xl shadow-md flex-shrink-0 group-hover:shadow-lg transition-shadow duration-300
-                      ${isDark ? 'bg-gradient-to-br from-red-400 to-red-500' : 'bg-gradient-to-br from-red-500 to-red-600'}`}>
-                      <Icon size={15} className={isDark ? 'text-gray-900' : 'text-white'} />
-                    </div>
-                    <span className={`text-sm font-medium truncate ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{label}</span>
-                  </motion.div>
-                ))}
-              </div>
+              <iframe
+                className="w-full rounded-xl"
+                src="https://open.spotify.com/embed/playlist/5RqOuJMNqLY1BA40vh8MCT?utm_source=generator&theme=0"
+                title="Spotify playlist"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                style={{ height: '152px', border: 'none' }}
+              />
             </motion.div>
 
           </div>
@@ -193,7 +282,6 @@ const AboutPage = ({ isDark }) => {
           >
             <div className={`absolute top-4 left-0 w-1 h-20 rounded-r-full ${isDark ? 'bg-gradient-to-b from-lime-400 to-lime-500' : 'bg-gradient-to-b from-red-500 to-red-600'}`} />
 
-            {/* Header */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
               <div className="flex items-center gap-3">
                 <div className={`p-2 rounded-xl shadow-md ${isDark ? 'bg-gradient-to-br from-lime-400 to-lime-500' : 'bg-gradient-to-br from-red-500 to-red-600'}`}>
@@ -234,7 +322,6 @@ const AboutPage = ({ isDark }) => {
 
             <div className={`border-t mb-6 ${isDark ? 'border-white/10' : 'border-gray-100'}`} />
 
-            {/* Calendar */}
             <div className="relative min-h-[170px]">
               <AnimatePresence mode="wait">
                 <motion.div

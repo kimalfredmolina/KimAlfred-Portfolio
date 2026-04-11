@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Moon, Sun, Download } from 'lucide-react';
 import Profile from '../assets/kim2.jpg'
 import BannerGif from '../assets/code.gif'
+import CatGIF from '../assets/cat.gif'
+import BmoGIF from '../assets/bmo.gif'
 import cv from '../assets/Kim Alfred Molina - Resume.pdf';
 import BurgerMenu from '../constants/BurgerMenu'
 
@@ -12,11 +14,27 @@ export default function ProfileCard({ isDark, setIsDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [displayedText, setDisplayedText] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  
+  //GIF 
+  const bannerImages = [
+    BannerGif,
+    CatGIF,
+    BmoGIF
+  ];
   
   const fullName = "Kim Alfred Molina";
   const email = "kimalfredmolina1224@gmail.com";
 
- // Typing animation effect with erasing
+ // Typing animation effect with erasing with banner rotation effect every 10 sec
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBannerIndex((prev) => (prev + 1) % bannerImages.length);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [bannerImages.length]);
+
   useEffect(() => {
     let currentIndex = 0;
     let isDeleting = false;
@@ -112,15 +130,22 @@ export default function ProfileCard({ isDark, setIsDark }) {
         {/* Banner Section */}
         <motion.div
           variants={itemVariants}
-          className={`relative h-60 mb-20 rounded-lg flex items-center justify-center transition-colors duration-500 ${
+          className={`relative h-80 mb-20 rounded-lg flex items-center justify-center transition-colors duration-500 ${
             isDark ? 'bg-[#334155]' : 'bg-gray-200'
           }`}
         >
-        <img
-            src={BannerGif}
-            alt="Banner GIF"
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentBannerIndex}
+            src={bannerImages[currentBannerIndex]}
+            alt="Banner"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
             className="absolute inset-0 w-full h-full object-cover rounded-lg"
-        />
+          />
+        </AnimatePresence>
           
           {/* Profile Picture */}
           <motion.div

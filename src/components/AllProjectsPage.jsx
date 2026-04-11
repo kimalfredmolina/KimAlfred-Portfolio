@@ -39,8 +39,8 @@ const Dropdown = ({ value, options, onChange, isDark }) => {
                 aria-haspopup="listbox"
                 className={`w-full rounded-full px-4 py-2 text-left text-xs font-medium border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500/40 ${
                     isDark
-                        ? 'bg-[#334155] text-gray-200 border-gray-600 focus:border-red-500'
-                        : 'bg-white text-gray-800 border-gray-300 focus:border-red-500'
+                        ? 'bg-[#334155] text-gray-200 border-gray-600 hover:bg-red-600 hover:text-white hover:border-red-600 focus:border-red-500'
+                        : 'bg-white text-gray-800 border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 focus:border-red-500'
                 }`}
             >
                 <span className="flex items-center justify-between gap-3">
@@ -72,12 +72,12 @@ const Dropdown = ({ value, options, onChange, isDark }) => {
                                         onChange(option);
                                         setOpen(false);
                                     }}
-                                    className={`w-full px-4 py-2 text-left text-xs transition-colors duration-150 ${
+                                    className={`w-full px-4 py-2 text-left text-xs transition-colors duration-150 rounded-lg ${
                                         value === option
                                             ? 'bg-red-600 text-white'
                                             : isDark
-                                                ? 'text-gray-200 hover:bg-[#475569]'
-                                                : 'text-gray-700 hover:bg-gray-100'
+                                                ? 'text-gray-200 hover:bg-red-600 hover:text-white'
+                                                : 'text-gray-700 hover:bg-red-600 hover:text-white'
                                     }`}
                                 >
                                     {option}
