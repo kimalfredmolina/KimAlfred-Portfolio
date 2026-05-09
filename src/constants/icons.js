@@ -19,12 +19,14 @@ import django from '../assets/icons/django.svg';
 import node from '../assets/icons/node.png';
 import express from '../assets/icons/express.png'
 import next from '../assets/icons/next.webp';
+import nest from '../assets/icons/nest.svg'
 
 // Databases
 import mysql from '../assets/icons/mysql.png';
 import firebase from '../assets/icons/firebase.png';
 import mongodb from '../assets/icons/mongodb.svg';
 import postgre from '../assets/icons/postgre.png';
+import supabase from '../assets/icons/supabase.webp';
 import mssql from '../assets/icons/mssql.png';
 
 // Tools
@@ -39,6 +41,7 @@ import clickup from '../assets/icons/clickup.png';
 import actions from '../assets/icons/actions.png';
 import docker from '../assets/icons/docker.png';
 import postman from '../assets/icons/postman.svg';
+import prisma from '../assets/icons/prisma.png';
 
 //SE
 import sdlc from '../assets/icons/sdlc.png';
@@ -64,12 +67,14 @@ export const ICONS = {
     'Node.js': node,
     'Express.js': express,
     'Next.js': next, 
-
+    'Nest.js': nest,
+    
     // Databases
     MySQL: mysql,
     Firebase: firebase,
     MongoDB: mongodb,
     PostgreSQL: postgre,
+    Supabase: supabase,
     'MS SQL Server': mssql,
 
     // Tools
@@ -84,6 +89,7 @@ export const ICONS = {
     Android: android,
     ClickUp: clickup,
     Postman: postman,
+    'Prisma ORM': prisma,
 
     // Software Engineering
     SDLC: sdlc,

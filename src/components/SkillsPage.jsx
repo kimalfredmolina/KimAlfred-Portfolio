@@ -32,13 +32,13 @@ const SkillsPage = ({ isDark }) => {
     ],
     '• Frameworks': [
       { name: 'React.js' }, { name: 'React Native' }, { name: 'Tailwind CSS' },
-      { name: 'Django' }, { name: 'Node.js' }, { name: 'Express.js' }, { name: 'Next.js' },
+      { name: 'Django' }, { name: 'Node.js' }, { name: 'Express.js' }, { name: 'Next.js' }, { name: 'Nest.js' },
     ],
     '• Database Management': [
-      { name: 'MySQL' }, { name: 'Firebase' }, { name: 'MongoDB' }, { name: 'PostgreSQL' },
+      { name: 'MySQL' }, { name: 'Firebase' }, { name: 'MongoDB' }, { name: 'Supabase' }, { name: 'PostgreSQL' },
     ],
     '• Tools': [
-      { name: 'Git' }, { name: 'Github' }, { name: 'Postman' }, { name: 'Figma' },
+      { name: 'Git' }, { name: 'Github' }, { name: 'Postman' }, { name: 'Prisma ORM' }, { name: 'Figma' },
       { name: 'Jest' }, { name: 'Expo' }, { name: 'ClickUp' },
     ],
     '• DevOps': [
