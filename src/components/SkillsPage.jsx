@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { EXPERIENCES } from '../constants/experiences';
 import { getIconPath } from '../constants/icons';
 
 const SkillsPage = ({ isDark }) => {
+  const [expandedExperiences, setExpandedExperiences] = useState({});
+
+  const toggleExpanded = (index) => {
+    setExpandedExperiences(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const truncateText = (text, wordLimit = 30) => {
+    const words = text.split(/\s+/).filter(word => word.trim());
+    if (words.length <= wordLimit) return text;
+    return words.slice(0, wordLimit).join(' ') + '...';
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -165,9 +180,56 @@ const SkillsPage = ({ isDark }) => {
                 <div className={`border-t mb-3 ${isDark ? 'border-white/10' : 'border-gray-200'}`} />
 
                 {/* Description */}
-                <p className={`text-sm mb-4 leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {experience.description}
-                </p>
+                <div>
+                  <ul className={`text-sm mb-3 leading-relaxed space-y-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {(() => {
+                      const bullets = (expandedExperiences[index] 
+                        ? experience.description 
+                        : truncateText(experience.description)
+                      ).split('•').filter(item => item.trim());
+                      
+                      const isExpanded = expandedExperiences[index];
+                      const isTruncatable = experience.description.split(/\s+/).filter(word => word.trim()).length > 30;
+                      const isTruncated = !isExpanded && isTruncatable;
+
+                      return bullets.map((bullet, idx) => {
+                        const isLast = idx === bullets.length - 1;
+                        return (
+                          <li key={idx} className="flex gap-2">
+                            <span className={isDark ? 'text-lime-500' : 'text-red-500'}>•</span>
+                            <span>
+                              {bullet.trim()}
+                              {isLast && isTruncated && (
+                                <button
+                                  onClick={() => toggleExpanded(index)}
+                                  className={`ml-1 font-semibold transition-all duration-200 ${
+                                    isDark
+                                      ? 'text-lime-400 hover:text-lime-300'
+                                      : 'text-red-500 hover:text-red-600'
+                                  }`}
+                                >
+                                  See More
+                                </button>
+                              )}
+                              {isLast && isExpanded && isTruncatable && (
+                                <button
+                                  onClick={() => toggleExpanded(index)}
+                                  className={`ml-1 font-semibold transition-all duration-200 ${
+                                    isDark
+                                      ? 'text-lime-400 hover:text-lime-300'
+                                      : 'text-red-500 hover:text-red-600'
+                                  }`}
+                                >
+                                  See Less
+                                </button>
+                              )}
+                            </span>
+                          </li>
+                        );
+                      });
+                    })()}
+                  </ul>
+                </div>
 
                 {/* Tech badges */}
                 <div className="flex flex-wrap gap-2">
