@@ -112,14 +112,12 @@ const AboutPage = ({ isDark }) => {
             {/* Description */}
             <div className="mb-6">
               <p className={`text-sm leading-[1.85] ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                Hi there. I'm a Computer Science student at Taguig City University with a passion for
-                building things that live on the internet.
+                Hi there. I'm a Computer Science graduate and Software Developer with a passion for building things that live on the internet.
               </p>
 
               <p className={`text-sm leading-[1.85] mt-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                I'm currently an intern at Inspire Holdings Inc., where I gain hands-on experience
-                working on real-world projects and improving my development workflow in a professional
-                environment. I enjoy creating products where design and engineering come together seamlessly.
+                I enjoy developing real-world applications, solving problems through code, and creating products where design and engineering work together 
+                seamlessly. I'm constantly learning new technologies and improving my skills to build efficient, scalable, and user-focused solutions.
               </p>
             </div>
 
