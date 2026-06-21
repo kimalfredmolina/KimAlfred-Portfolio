@@ -236,34 +236,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
               </div>
             </div>
 
-            {/* Download Button - Desktop Right Side */}
+            {/* View Resume Button - Desktop Right Side */}
             <div className="flex gap-3">
-              <a
-                href={cv}
-                download="Kim_Alfred_Molina_Resume.pdf"
-                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
-                    isDark
-                      ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
-                      : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                  }`}
-                >
-                  {/* Text */}
-                  <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
-                    <Download size={18} />
-                    Download Resume
-                  </span>
-                  {/* Icon slides up */}
-                  <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    <Download size={22} />
-                  </span>
-                </motion.div>
-              </a>
-
               <a
                 href={cv}
                 onClick={(e) => {
@@ -284,7 +258,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                   {/* Text */}
                   <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
                     <Eye size={18} />
-                    View
+                    View my Resume
                   </span>
                   {/* Icon slides up */}
                   <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -363,34 +337,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
               </div>
             </div>
 
-            {/* Download Button - Mobile Full Width */}
+            {/* View Resume Button - Mobile Full Width */}
             <div className="flex gap-3">
-              <a
-                href={cv}
-                download="Kim_Alfred_Molina_Resume.pdf"
-                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg flex-1"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
-                    isDark
-                      ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
-                      : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                  }`}
-                >
-                  {/* Text */}
-                  <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
-                    <Download size={18} />
-                    Download
-                  </span>
-                  {/* Icon slides up */}
-                  <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    <Download size={22} />
-                  </span>
-                </motion.div>
-              </a>
-
               <a
                 href={cv}
                 onClick={(e) => {
@@ -411,7 +359,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                   {/* Text */}
                   <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
                     <Eye size={18} />
-                    View
+                    View my Resume
                   </span>
                   {/* Icon slides up */}
                   <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
