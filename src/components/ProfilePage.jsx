@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, Linkedin, Mail, Moon, Sun, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Moon, Sun, Download, Eye } from 'lucide-react';
 import Profile from '../assets/kim2.jpg'
 import BannerGif from '../assets/code.gif'
 import CatGIF from '../assets/cat.gif'
 import BmoGIF from '../assets/bmo.gif'
-import cv from '../assets/Kim Alfred Molina - Resume.pdf';
+import cv from '../assets/Molina, Kim Alfred Resume.pdf';
 import BurgerMenu from '../constants/BurgerMenu'
 
 export default function ProfileCard({ isDark, setIsDark }) {
@@ -15,6 +15,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
   const [displayedText, setDisplayedText] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const [showResumeModal, setShowResumeModal] = useState(false);
   
   //GIF 
   const bannerImages = [
@@ -175,7 +176,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                   <span className={`inline-block w-4 h-1 ml-1 ${isDark ? 'bg-white' : 'bg-gray-900'} ${isTypingComplete ? 'animate-pulse' : ''}`}></span>
                 </h1>
                 <p className={`text-lg font-semibold ${isDark ? 'text-red-400' : 'text-red-600'}`}>
-                  4th Year Computer Science
+                  Software Developer | Full Stack Web Developer
                 </p>
               </div>
               
@@ -235,32 +236,37 @@ export default function ProfileCard({ isDark, setIsDark }) {
               </div>
             </div>
 
-            {/* Download Button - Desktop Right Side */}
-            <a
-              href={cv}
-              download="Kim_Alfred_Molina_Resume.pdf"
-              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg"
-            >
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
-                  isDark
-                    ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
-                    : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                }`}
+            {/* View Resume Button - Desktop Right Side */}
+            <div className="flex gap-3">
+              <a
+                href={cv}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setShowResumeModal(true);
+                }}
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg"
               >
-                {/* Text */}
-                <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
-                  <Download size={18} />
-                  Download Resume
-                </span>
-                {/* Icon slides up */}
-                <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <Download size={22} />
-                </span>
-              </motion.div>
-            </a>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className={`relative z-10 flex h-12 items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
+                    isDark
+                      ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
+                      : 'bg-neutral-900 text-neutral-100 border border-gray-300'
+                  }`}
+                >
+                  {/* Text */}
+                  <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
+                    <Eye size={18} />
+                    View my Resume
+                  </span>
+                  {/* Icon slides up */}
+                  <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    <Eye size={22} />
+                  </span>
+                </motion.div>
+              </a>
+            </div>
           </div>
 
           {/* Mobile Layout */}
@@ -331,35 +337,86 @@ export default function ProfileCard({ isDark, setIsDark }) {
               </div>
             </div>
 
-            {/* Download Button - Mobile Full Width */}
-            <a
-              href={cv}
-              download="Kim_Alfred_Molina_Resume.pdf"
-              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg w-full"
-            >
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
-                  isDark
-                    ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
-                    : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                }`}
+            {/* View Resume Button - Mobile Full Width */}
+            <div className="flex gap-3">
+              <a
+                href={cv}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setShowResumeModal(true);
+                }}
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg flex-1"
               >
-                {/* Text */}
-                <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
-                  <Download size={18} />
-                  Download Resume
-                </span>
-                {/* Icon slides up */}
-                <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <Download size={22} />
-                </span>
-              </motion.div>
-            </a>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
+                    isDark
+                      ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
+                      : 'bg-neutral-900 text-neutral-100 border border-gray-300'
+                  }`}
+                >
+                  {/* Text */}
+                  <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
+                    <Eye size={18} />
+                    View my Resume
+                  </span>
+                  {/* Icon slides up */}
+                  <span className="absolute translate-y-[150%] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    <Eye size={22} />
+                  </span>
+                </motion.div>
+              </a>
+            </div>
           </div>
         </motion.div>
       </motion.div>
+
+      {/* Resume Modal */}
+      <AnimatePresence>
+        {showResumeModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center p-4"
+            onClick={() => setShowResumeModal(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              onClick={(e) => e.stopPropagation()}
+              className={`relative w-full h-[85vh] max-w-5xl rounded-2xl overflow-hidden shadow-2xl ${
+                isDark ? 'bg-[#1e293b]' : 'bg-white'
+              }`}
+            >
+              {/* Close Button */}
+              <div className={`absolute top-4 right-1 z-10 flex items-center gap-2 ${isDark ? 'bg-[#2d3748]' : 'bg-gray-100'} p-2 rounded-lg`}>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowResumeModal(false)}
+                  className={`p-2 rounded-lg transition-colors ${
+                    isDark 
+                      ? 'hover:bg-[#334155] text-gray-300' 
+                      : 'hover:bg-gray-200 text-gray-700'
+                  }`}
+                >
+                  ✕
+                </motion.button>
+              </div>
+
+              {/* PDF Viewer */}
+              <iframe
+                src={cv}
+                className="w-full h-full border-none"
+                title="Resume PDF"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
