@@ -102,7 +102,7 @@ const AboutPage = ({ isDark }) => {
                   Kim Alfred
                 </h2>
                 <p className={`text-xs font-semibold ${isDark ? 'text-lime-400' : 'text-red-500'}`}>
-                  Full-Stack Developer · CS Student
+                  Full-Stack Developer · CS Graduate
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ const AboutPage = ({ isDark }) => {
               </p>
 
               <p className={`text-sm leading-[1.85] mt-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                I enjoy developing real-world applications, solving problems through code, and creating products where design and engineering work together 
+                I enjoy developing real-world applications, solving problems through code, and creating products where design and engineering work together
                 seamlessly. I'm constantly learning new technologies and improving my skills to build efficient, scalable, and user-focused solutions.
               </p>
             </div>

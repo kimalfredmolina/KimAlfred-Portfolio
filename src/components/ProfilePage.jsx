@@ -5,7 +5,7 @@ import Profile from '../assets/kim2.jpg'
 import BannerGif from '../assets/code.gif'
 import CatGIF from '../assets/cat.gif'
 import BmoGIF from '../assets/bmo.gif'
-import cv from '../assets/Molina, Kim Alfred Resume.pdf';
+import cv from '../assets/Molina-Kim-Alfred-Resume.pdf';
 import BurgerMenu from '../constants/BurgerMenu'
 
 export default function ProfileCard({ isDark, setIsDark }) {
@@ -16,18 +16,18 @@ export default function ProfileCard({ isDark, setIsDark }) {
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [showResumeModal, setShowResumeModal] = useState(false);
-  
+
   //GIF 
   const bannerImages = [
     BannerGif,
     CatGIF,
     BmoGIF
   ];
-  
+
   const fullName = "Kim Alfred Molina";
   const email = "kimalfredmolina1224@gmail.com";
 
- // Typing animation effect with erasing with banner rotation effect every 10 sec
+  // Typing animation effect with erasing with banner rotation effect every 10 sec
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBannerIndex((prev) => (prev + 1) % bannerImages.length);
@@ -40,11 +40,11 @@ export default function ProfileCard({ isDark, setIsDark }) {
     let currentIndex = 0;
     let isDeleting = false;
     let loopCount = 0;
-    
+
     const typeWriter = () => {
       const firstName = "Kim Alfred";
       const fullName = "Kim Alfred Molina";
-      
+
       if (!isDeleting && currentIndex <= fullName.length) {
         // Typing forward
         setDisplayedText(fullName.slice(0, currentIndex));
@@ -65,10 +65,10 @@ export default function ProfileCard({ isDark, setIsDark }) {
         loopCount++;
         setTimeout(typeWriter, 1000); // Wait 1 second before typing again
       }
-      
+
       setIsTypingComplete(!isDeleting && currentIndex === fullName.length);
     };
-    
+
     typeWriter();
   }, []);
 
@@ -109,9 +109,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
   };
 
   return (
-    <div className={`transition-colors duration-500 ${
-      isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
-    }`}>
+    <div className={`transition-colors duration-500 ${isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
+      }`}>
 
       <BurgerMenu
         isDark={isDark}
@@ -131,31 +130,29 @@ export default function ProfileCard({ isDark, setIsDark }) {
         {/* Banner Section */}
         <motion.div
           variants={itemVariants}
-          className={`relative h-80 mb-20 rounded-lg flex items-center justify-center transition-colors duration-500 ${
-            isDark ? 'bg-[#334155]' : 'bg-gray-200'
-          }`}
+          className={`relative h-80 mb-20 rounded-lg flex items-center justify-center transition-colors duration-500 ${isDark ? 'bg-[#334155]' : 'bg-gray-200'
+            }`}
         >
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentBannerIndex}
-            src={bannerImages[currentBannerIndex]}
-            alt="Banner"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0 w-full h-full object-cover rounded-lg"
-          />
-        </AnimatePresence>
-          
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentBannerIndex}
+              src={bannerImages[currentBannerIndex]}
+              alt="Banner"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0 w-full h-full object-cover rounded-lg"
+            />
+          </AnimatePresence>
+
           {/* Profile Picture */}
           <motion.div
             variants={itemVariants}
             className="absolute -bottom-16 left-6"
           >
-            <div className={`w-40 h-40 rounded-full border-4 overflow-hidden ${
-              isDark ? 'border-[#1e293b]' : 'border-white'
-            }`}>
+            <div className={`w-40 h-40 rounded-full border-4 overflow-hidden ${isDark ? 'border-[#1e293b]' : 'border-white'
+              }`}>
               <img
                 src={Profile}
                 alt="Profile"
@@ -179,7 +176,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                   Software Developer | Full Stack Web Developer
                 </p>
               </div>
-              
+
               {/* Social Links - Desktop Fixed Position */}
               <div className="absolute top-0 left-[350px] flex gap-2">
                 <motion.a
@@ -188,19 +185,18 @@ export default function ProfileCard({ isDark, setIsDark }) {
                   href="https://github.com/kimalfredmolina"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-2.5 rounded-full transition-colors duration-300 ${
-                    isDark 
-                      ? 'bg-[#334155] hover:bg-[#475569] text-white' 
-                      : 'bg-gray-800 hover:bg-gray-900 text-white'
-                  }`}
+                  className={`p-2.5 rounded-full transition-colors duration-300 ${isDark
+                    ? 'bg-[#334155] hover:bg-[#475569] text-white'
+                    : 'bg-gray-800 hover:bg-gray-900 text-white'
+                    }`}
                 >
                   <Github size={18} />
                 </motion.a>
-                
+
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="https://www.linkedin.com/in/kim-alfred-molina-323455276/"
+                  href="https://www.linkedin.com/in/kim-alfred-a-molina/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-300"
@@ -249,11 +245,10 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className={`relative z-10 flex h-12 items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
-                    isDark
-                      ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
-                      : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                  }`}
+                  className={`relative z-10 flex h-12 items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${isDark
+                    ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
+                    : 'bg-neutral-900 text-neutral-100 border border-gray-300'
+                    }`}
                 >
                   {/* Text */}
                   <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
@@ -290,19 +285,18 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 href="https://github.com/kimalfredmolina"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2.5 rounded-full transition-colors duration-300 ${
-                  isDark 
-                    ? 'bg-[#334155] hover:bg-[#475569] text-white' 
-                    : 'bg-gray-800 hover:bg-gray-900 text-white'
-                }`}
+                className={`p-2.5 rounded-full transition-colors duration-300 ${isDark
+                  ? 'bg-[#334155] hover:bg-[#475569] text-white'
+                  : 'bg-gray-800 hover:bg-gray-900 text-white'
+                  }`}
               >
                 <Github size={18} />
               </motion.a>
-              
+
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://www.linkedin.com/in/kim-alfred-molina-323455276/"
+                href="https://www.linkedin.com/in/kim-alfred-a-molina/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-300"
@@ -350,11 +344,10 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${
-                    isDark
-                      ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
-                      : 'bg-neutral-900 text-neutral-100 border border-gray-300'
-                  }`}
+                  className={`relative z-10 flex h-12 w-full items-center justify-center gap-2 rounded-lg px-6 font-medium transition-colors duration-300 ${isDark
+                    ? 'bg-neutral-950 text-neutral-200 border border-gray-600'
+                    : 'bg-neutral-900 text-neutral-100 border border-gray-300'
+                    }`}
                 >
                   {/* Text */}
                   <span className="transition-transform duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 flex items-center gap-2">
@@ -387,9 +380,8 @@ export default function ProfileCard({ isDark, setIsDark }) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
-              className={`relative w-full h-[85vh] max-w-5xl rounded-2xl overflow-hidden shadow-2xl ${
-                isDark ? 'bg-[#1e293b]' : 'bg-white'
-              }`}
+              className={`relative w-full h-[85vh] max-w-5xl rounded-2xl overflow-hidden shadow-2xl ${isDark ? 'bg-[#1e293b]' : 'bg-white'
+                }`}
             >
               {/* Close Button */}
               <div className={`absolute top-4 right-1 z-10 flex items-center gap-2 ${isDark ? 'bg-[#2d3748]' : 'bg-gray-100'} p-2 rounded-lg`}>
@@ -397,11 +389,10 @@ export default function ProfileCard({ isDark, setIsDark }) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setShowResumeModal(false)}
-                  className={`p-2 rounded-lg transition-colors ${
-                    isDark 
-                      ? 'hover:bg-[#334155] text-gray-300' 
-                      : 'hover:bg-gray-200 text-gray-700'
-                  }`}
+                  className={`p-2 rounded-lg transition-colors ${isDark
+                    ? 'hover:bg-[#334155] text-gray-300'
+                    : 'hover:bg-gray-200 text-gray-700'
+                    }`}
                 >
                   ✕
                 </motion.button>
