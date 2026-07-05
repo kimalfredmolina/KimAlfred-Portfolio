@@ -273,7 +273,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 <span className={`inline-block w-3 h-1 ml-1 ${isDark ? 'bg-white' : 'bg-gray-900'} ${isTypingComplete ? 'animate-pulse' : ''}`}></span>
               </h1>
               <p className={`text-base font-semibold ${isDark ? 'text-red-400' : 'text-red-600'}`}>
-                4th Year Computer Science
+                Software Developer | Full Stack Web Developer
               </p>
             </div>
 
