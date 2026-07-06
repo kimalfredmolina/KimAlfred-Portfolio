@@ -3,15 +3,24 @@ import IMCEST from '../assets/certificates/IMCEST.jpg'
 import MongoDB from '../assets/certificates/MongoDB.jpg'
 import Coursera1 from '../assets/certificates/Molina-Coursera1.jpg'
 import Coursera2 from '../assets/certificates/Molina-Coursera2.jpg'
+import Coursera3 from '../assets/certificates/Molina-Coursera3.jpg'
 
 export const certificates = [
+  {
+    title: 'Project Planning: Putting It All Together',
+    issuer: 'Google',
+    date: 'July 2026',
+    image: Coursera3,
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/U2EPHJHALMJU',
+    skills: ['Document Management', 'Budget Management', 'Procurement', 'Project Risk Management']
+  },
   {
     title: 'Project Initiation: Starting a Successful Project',
     issuer: 'Google',
     date: 'June 2026',
     image: Coursera2,
     credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/ABB11N0C8ZIF',
-    skills: ['Project Initiation', 'Google']
+    skills: ['Stakeholder Management', 'Project Management', 'Scope Management', 'Project Documentation']
   },
   {
     title: 'Foundations of Project Management',
@@ -19,7 +28,7 @@ export const certificates = [
     date: 'June 2026',
     image: Coursera1,
     credentialUrl: 'https://coursera.org/share/cc80d642e85cb7d6fba3b43a24cfa211',
-    skills: ['Project Management', 'Google']
+    skills: ['Organizational Structure', 'Strategic Thinking', 'Project Planning', 'Project Coordination']
   },
   {
     title: 'Monitoring MongoDB with Built-in Tools',
