@@ -4,8 +4,17 @@ import MongoDB from '../assets/certificates/MongoDB.jpg'
 import Coursera1 from '../assets/certificates/Molina-Coursera1.jpg'
 import Coursera2 from '../assets/certificates/Molina-Coursera2.jpg'
 import Coursera3 from '../assets/certificates/Molina-Coursera3.jpg'
+import Coursera4 from '../assets/certificates/Molina-Coursera4.jpg'
 
 export const certificates = [
+  {
+    title: 'Project Execution: Running the Project',
+    issuer: 'Google',
+    date: 'July 2026',
+    image: Coursera4,
+    credentialUrl: 'https://coursera.org/share/acc8e0b82e68bdd918bb26117fefbcaa',
+    skills: ['Product Quality (QA/QC)', 'Project Implementation', 'Quality Assessment', 'Project Closure']
+  },
   {
     title: 'Project Planning: Putting It All Together',
     issuer: 'Google',
