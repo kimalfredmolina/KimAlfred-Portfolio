@@ -7,13 +7,12 @@ import CatGIF from '../assets/cat.gif'
 import BmoGIF from '../assets/bmo.gif'
 import cv from '../assets/Molina-Kim-Alfred-Resume.pdf';
 import BurgerMenu from '../constants/BurgerMenu'
+import TextType from './TextType';
 
 export default function ProfileCard({ isDark, setIsDark }) {
 
   const [copied, setCopied] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [displayedText, setDisplayedText] = useState('');
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [showResumeModal, setShowResumeModal] = useState(false);
 
@@ -36,41 +35,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
     return () => clearInterval(interval);
   }, [bannerImages.length]);
 
-  useEffect(() => {
-    let currentIndex = 0;
-    let isDeleting = false;
-    let loopCount = 0;
 
-    const typeWriter = () => {
-      const firstName = "Kim Alfred";
-      const fullName = "Kim Alfred Molina";
-
-      if (!isDeleting && currentIndex <= fullName.length) {
-        // Typing forward
-        setDisplayedText(fullName.slice(0, currentIndex));
-        currentIndex++;
-        setTimeout(typeWriter, 150);
-      } else if (!isDeleting && currentIndex > fullName.length) {
-        // Pause at end before deleting
-        isDeleting = true;
-        setTimeout(typeWriter, 2500); //to pause at full name
-      } else if (isDeleting && currentIndex > firstName.length) {
-        // Deleting back to first name
-        currentIndex--;
-        setDisplayedText(fullName.slice(0, currentIndex));
-        setTimeout(typeWriter, 100); // Faster deletion
-      } else if (isDeleting && currentIndex === firstName.length) {
-        // Pause at first name before typing again
-        isDeleting = false;
-        loopCount++;
-        setTimeout(typeWriter, 1000); // Wait 1 second before typing again
-      }
-
-      setIsTypingComplete(!isDeleting && currentIndex === fullName.length);
-    };
-
-    typeWriter();
-  }, []);
 
   const handleCopyEmail = async () => {
     await navigator.clipboard.writeText(email);
@@ -109,8 +74,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
   };
 
   return (
-    <div className={`transition-colors duration-500 ${isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
-      }`}>
+    <div className={`transition-colors duration-500 bg-transparent`}>
 
       <BurgerMenu
         isDark={isDark}
@@ -169,8 +133,18 @@ export default function ProfileCard({ isDark, setIsDark }) {
             <div className="relative">
               <div>
                 <h1 className={`text-4xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  {displayedText}
-                  <span className={`inline-block w-4 h-1 ml-1 ${isDark ? 'bg-white' : 'bg-gray-900'} ${isTypingComplete ? 'animate-pulse' : ''}`}></span>
+                  <TextType
+                    text={["Kim Alfred", "Kim Alfred A. Molina"]}
+                    typingSpeed={70}
+                    pauseDuration={1500}
+                    showCursor
+                    cursorCharacter="_"
+                    deletingSpeed={40}
+                    variableSpeedEnabled={false}
+                    variableSpeedMin={60}
+                    variableSpeedMax={120}
+                    cursorBlinkDuration={0.5}
+                  />
                 </h1>
                 <p className={`text-lg font-semibold ${isDark ? 'text-red-400' : 'text-red-600'}`}>
                   Software Developer | Full Stack Web Developer
@@ -178,7 +152,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
               </div>
 
               {/* Social Links - Desktop Fixed Position */}
-              <div className="absolute top-0 left-[350px] flex gap-2">
+              <div className="absolute top-0 left-[380px] flex gap-2">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -269,8 +243,18 @@ export default function ProfileCard({ isDark, setIsDark }) {
             {/* Name and Title */}
             <div className="mb-4">
               <h1 className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                {displayedText}
-                <span className={`inline-block w-3 h-1 ml-1 ${isDark ? 'bg-white' : 'bg-gray-900'} ${isTypingComplete ? 'animate-pulse' : ''}`}></span>
+                <TextType
+                  text={["Kim Alfred", "Kim Alfred Molina"]}
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor
+                  cursorCharacter="_"
+                  deletingSpeed={50}
+                  variableSpeedEnabled={false}
+                  variableSpeedMin={60}
+                  variableSpeedMax={120}
+                  cursorBlinkDuration={0.5}
+                />
               </h1>
               <p className={`text-base font-semibold ${isDark ? 'text-red-400' : 'text-red-600'}`}>
                 Software Developer | Full Stack Web Developer
@@ -380,7 +364,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
-              className={`relative w-full h-[85vh] max-w-5xl rounded-2xl overflow-hidden shadow-2xl ${isDark ? 'bg-[#1e293b]' : 'bg-white'
+              className={`relative w-full h-[85vh] max-w-5xl rounded-2xl overflow-hidden shadow-2xl ${isDark ? 'bg-[#1e293b]/90' : 'bg-white/90'
                 }`}
             >
               {/* Close Button */}

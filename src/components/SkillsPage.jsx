@@ -67,7 +67,7 @@ const SkillsPage = ({ isDark }) => {
   return (
     <div
       id="skills"
-      className={`transition-colors duration-500 ${isDark ? 'bg-[#1e293b]' : 'bg-gray-50'}`}
+      className={`transition-colors duration-500 bg-transparent`}
     >
       <motion.div
         variants={containerVariants}

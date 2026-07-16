@@ -45,7 +45,7 @@ const CertificatesPage = ({ isDark }) => {
     <div
       id="certificates"
       className={`transition-colors duration-500 ${
-        isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
+        'bg-transparent'
       }`}
     >
       <motion.div

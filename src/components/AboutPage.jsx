@@ -49,7 +49,7 @@ const AboutPage = ({ isDark }) => {
   return (
     <div
       id="about"
-      className={`transition-colors duration-500 ${isDark ? 'bg-[#1e293b]' : 'bg-gray-50'}`}
+      className={`transition-colors duration-500 bg-transparent`}
     >
       <motion.div
         variants={containerVariants}
@@ -320,7 +320,7 @@ const AboutPage = ({ isDark }) => {
 
             <div className={`border-t mb-6 ${isDark ? 'border-white/10' : 'border-gray-100'}`} />
 
-            <div className="relative min-h-[170px]">
+            <div className={`relative min-h-[170px] ${isDark ? 'text-white' : 'text-gray-900'}`}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={selectedYear}

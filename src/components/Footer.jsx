@@ -11,8 +11,7 @@ const Footer = ({ isDark }) => {
 
   return (
     <footer
-      className={`transition-colors duration-500 ${isDark ? 'bg-[#1e293b]' : 'bg-gray-50'
-        }`}
+      className={`transition-colors duration-500 bg-transparent`}
     >
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div
