@@ -334,12 +334,12 @@ const AboutPage = ({ isDark }) => {
                     <GitHubCalendar username="kimalfredmolina" year={selectedYear} colorScheme={isDark ? 'dark' : 'light'} blockSize={12} blockMargin={4} fontSize={13} renderBlock={renderBlock} />
                   </div>
                   <div className="hidden sm:block md:hidden overflow-x-auto pb-4">
-                    <div className="min-w-[650px]">
+                    <div className="w-max pr-4">
                       <GitHubCalendar username="kimalfredmolina" year={selectedYear} colorScheme={isDark ? 'dark' : 'light'} blockSize={11} blockMargin={3} fontSize={13} renderBlock={renderBlock} />
                     </div>
                   </div>
                   <div className="block sm:hidden overflow-x-auto pb-4">
-                    <div className="min-w-[600px]">
+                    <div className="w-max pr-4">
                       <GitHubCalendar username="kimalfredmolina" year={selectedYear} colorScheme={isDark ? 'dark' : 'light'} blockSize={11} blockMargin={3} fontSize={12} renderBlock={renderBlock} />
                     </div>
                   </div>

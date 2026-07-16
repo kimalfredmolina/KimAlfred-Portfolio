@@ -368,7 +368,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                 }`}
             >
               {/* Close Button */}
-              <div className={`absolute top-4 right-1 z-10 flex items-center gap-2 ${isDark ? 'bg-[#2d3748]' : 'bg-gray-100'} p-2 rounded-lg`}>
+              <div className={`absolute top-4 left-4 z-10 flex items-center gap-2 ${isDark ? 'bg-[#2d3748]' : 'bg-gray-100'} p-2 rounded-lg`}>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
