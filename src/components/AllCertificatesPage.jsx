@@ -190,21 +190,37 @@ const AllCertificatesPage = ({ isDark }) => {
                                     </h3>
                                 </div>
                                 
-                                <p
-                                    className={`text-sm mb-1 ${
-                                        isDark ? 'text-gray-300' : 'text-gray-700'
-                                    }`}
-                                >
-                                    {cert.issuer}
-                                </p>
-                                
-                                <p
-                                    className={`text-xs mb-4 ${
-                                        isDark ? 'text-gray-400' : 'text-gray-500'
-                                    }`}
-                                >
-                                    {cert.date}
-                                </p>
+                                <div className="flex items-center gap-3 mb-4">
+                                    {/* Org Logo */}
+                                    {cert.orgLogo ? (
+                                        <img 
+                                            src={cert.orgLogo} 
+                                            alt={cert.issuer} 
+                                            className="w-8 h-8 object-contain rounded-full" 
+                                        />
+                                    ) : (
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isDark ? 'bg-[#475569]' : 'bg-gray-100'}`}>
+                                            <Award size={18} className={isDark ? 'text-gray-300' : 'text-gray-500'} />
+                                        </div>
+                                    )}
+                                    
+                                    <div className="flex flex-col">
+                                        <p
+                                            className={`text-sm mb-0.5 leading-tight ${
+                                                isDark ? 'text-gray-300' : 'text-gray-700'
+                                            }`}
+                                        >
+                                            {cert.issuer}
+                                        </p>
+                                        <p
+                                            className={`text-xs leading-tight ${
+                                                isDark ? 'text-gray-400' : 'text-gray-500'
+                                            }`}
+                                        >
+                                            {cert.date}
+                                        </p>
+                                    </div>
+                                </div>
 
                                 {/* Skills Tags */}
                                 <div className="flex flex-wrap gap-2 mb-4">
@@ -317,20 +333,35 @@ const AllCertificatesPage = ({ isDark }) => {
                                         >
                                             {selectedCert.title}
                                         </h3>
-                                        <p
-                                            className={`text-base mb-1 ${
-                                                isDark ? 'text-gray-300' : 'text-gray-700'
-                                            }`}
-                                        >
-                                            {selectedCert.issuer}
-                                        </p>
-                                        <p
-                                            className={`text-sm ${
-                                                isDark ? 'text-gray-400' : 'text-gray-500'
-                                            }`}
-                                        >
-                                            {selectedCert.date}
-                                        </p>
+                                    <div className="flex items-center gap-3 mt-1">
+                                        {selectedCert.orgLogo ? (
+                                            <img 
+                                                src={selectedCert.orgLogo} 
+                                                alt={selectedCert.issuer} 
+                                                className="w-11 h-11 object-contain rounded-full" 
+                                            />
+                                        ) : (
+                                            <div className={`w-11 h-11 rounded-full flex items-center justify-center ${isDark ? 'bg-[#475569]' : 'bg-gray-100'}`}>
+                                                <Award size={22} className={isDark ? 'text-gray-300' : 'text-gray-500'} />
+                                            </div>
+                                        )}
+                                        <div className="flex flex-col">
+                                            <p
+                                                className={`text-base mb-0.5 leading-tight ${
+                                                    isDark ? 'text-gray-300' : 'text-gray-700'
+                                                }`}
+                                            >
+                                                {selectedCert.issuer}
+                                            </p>
+                                            <p
+                                                className={`text-sm leading-tight ${
+                                                    isDark ? 'text-gray-400' : 'text-gray-500'
+                                                }`}
+                                            >
+                                                {selectedCert.date}
+                                            </p>
+                                        </div>
+                                    </div>
                                     </div>
                                     
                                     <motion.a

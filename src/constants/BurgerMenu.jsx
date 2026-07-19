@@ -72,13 +72,24 @@ export default function BurgerMenu({
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsDark(!isDark)}
-        className={`fixed top-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center transition-all ${
+        className={`fixed top-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center overflow-hidden transition-all ${
           isDark
             ? 'bg-[#475569] text-yellow-400 hover:bg-[#64748b]'
             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
         }`}
       >
-        {isDark ? <Sun size={18} /> : <Moon size={18} />}
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={isDark ? 'dark' : 'light'}
+            initial={{ y: -20, opacity: 0, rotate: -90 }}
+            animate={{ y: 0, opacity: 1, rotate: 0 }}
+            exit={{ y: 20, opacity: 0, rotate: 90 }}
+            transition={{ duration: 0.15 }}
+            className="flex items-center justify-center"
+          >
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </motion.div>
+        </AnimatePresence>
       </motion.button>
 
       {/* Burger Button */}
