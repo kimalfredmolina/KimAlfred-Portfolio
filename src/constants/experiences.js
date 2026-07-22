@@ -5,9 +5,9 @@ export const EXPERIENCES = [
     company: "Inspire Holdings Inc.",
     description: `
       • Develop and maintain backend features, RESTful APIs, and database solutions for multiple web applications and internal systems using NestJS, TypeScript, Prisma ORM, Supabase, and PostgreSQL.
-      • Implement new features, resolve production issues, and optimize backend performance to ensure reliable and scalable applications in an Agile/SDLC environment.
-      • Implemented endpoint authorization and access control by securing RESTful APIs with authentication and role-based authorization, returning appropriate HTTP 401 Unauthorized responses for unauthenticated requests.`,
-    technologies: ["Next.js", "Nest.js", "TypeScript", "Supabase", "Prisma ORM", "Tailwind CSS", "Postman", "Git", "Github", "SDLC", "Agile",],
+      • Performed PostgreSQL database migrations using Docker by generating database schemas and migrating existing tables to new Supabase databases, supporting new project deployments and maintaining data consistency.
+      • Implemented endpoint authorization and access control by securing RESTful APIs with authentication and role-based authorization, enforcing HTTP 401 Unauthorized responses for unauthenticated requests.`,
+    technologies: ["Next.js", "Nest.js", "TypeScript", "Supabase", "Prisma ORM", "Tailwind CSS", "Postman", "Git", "Github", "Docker", "SDLC", "Agile",],
   },
   {
     year: "Feb 2026 - May 2026",
