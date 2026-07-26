@@ -9,6 +9,7 @@ import Coursera5 from '../assets/certificates/Molina-Coursera5.jpg'
 import CiscoJS1 from '../assets/certificates/JSEssentials1-Molina.jpg'
 import CiscoJS2 from '../assets/certificates/JSEssentials2-Molina.jpg'
 import CiscoPy1 from '../assets/certificates/PyEssentials1-Molina.jpg'
+import CiscoPy2 from '../assets/certificates/PyEssentials2-Molina.jpg'
 
 //Org's Logo
 import Cisco from '../assets/icons/Cisco.png'
@@ -19,7 +20,16 @@ import TCULogo from '../assets/icons/TCU-logo.png'
 
 export const certificates = [
   {
-    title: 'Python Essential 1',
+    title: 'Python Essentials 2',
+    issuer: 'Cisco',
+    date: 'July 2026',
+    orgLogo: Cisco,
+    image: CiscoPy2,
+    credentialUrl: 'https://www.credly.com/badges/0a2e4846-dad1-4f02-bd54-d65ed2e1267a/',
+    skills: ['Python']
+  },
+  {
+    title: 'Python Essentials 1',
     issuer: 'Cisco',
     date: 'July 2026',
     orgLogo: Cisco,
@@ -28,7 +38,7 @@ export const certificates = [
     skills: ['Python']
   },
   {
-    title: 'JavaScript Essential 2',
+    title: 'JavaScript Essentials 2',
     issuer: 'Cisco',
     date: 'July 2026',
     orgLogo: Cisco,
@@ -37,7 +47,7 @@ export const certificates = [
     skills: ['JavaScript']
   },
   {
-    title: 'JavaScript Essential 1',
+    title: 'JavaScript Essentials 1',
     issuer: 'Cisco',
     date: 'July 2026',
     orgLogo: Cisco,
