@@ -10,15 +10,26 @@ import CiscoJS1 from '../assets/certificates/JSEssentials1-Molina.jpg'
 import CiscoJS2 from '../assets/certificates/JSEssentials2-Molina.jpg'
 import CiscoPy1 from '../assets/certificates/PyEssentials1-Molina.jpg'
 import CiscoPy2 from '../assets/certificates/PyEssentials2-Molina.jpg'
+import Docker from '../assets/certificates/Docker-Certificate-Molina.jpg'
 
 //Org's Logo
 import Cisco from '../assets/icons/Cisco.png'
 import Google from '../assets/icons/Google.webp'
 import MongoDBLogo from '../assets/icons/mongodb.svg'
 import TCULogo from '../assets/icons/TCU-logo.png'
+import DockerLogo from '../assets/icons/docker.png'
 
 
 export const certificates = [
+  {
+    title: 'Docker Foundations Professional Certificate',
+    issuer: 'Docker & LinkedIn',
+    date: 'July 2026',
+    orgLogo: DockerLogo,
+    image: Docker,
+    credentialUrl: 'https://www.linkedin.com/learning/certificates/7a49559a9c0a9c02fcc319d8152cb425d4841a36a307951dfc6d6f1bb7cf7121?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BQem0wtXHTsy5KaGtCAySeA%3D%3D',
+    skills: ['Docker', 'Containers', 'Containerization']
+  },
   {
     title: 'Python Essentials 2',
     issuer: 'Cisco',
