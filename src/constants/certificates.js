@@ -11,6 +11,8 @@ import CiscoJS2 from '../assets/certificates/JSEssentials2-Molina.jpg'
 import CiscoPy1 from '../assets/certificates/PyEssentials1-Molina.jpg'
 import CiscoPy2 from '../assets/certificates/PyEssentials2-Molina.jpg'
 import Docker from '../assets/certificates/Docker-Certificate-Molina.jpg'
+import DevOps from '../assets/certificates/DevOps-Micro-Molina.jpg'
+import Microservices from '../assets/certificates/MicroServices-Molina.jpg'
 
 //Org's Logo
 import Cisco from '../assets/icons/Cisco.png'
@@ -18,16 +20,35 @@ import Google from '../assets/icons/Google.webp'
 import MongoDBLogo from '../assets/icons/mongodb.svg'
 import TCULogo from '../assets/icons/TCU-logo.png'
 import DockerLogo from '../assets/icons/docker.png'
+import LinkedInLogo from '../assets/icons/linkedin.webp'
 
 
 export const certificates = [
+  {
+    title: 'Microservices Foundations',
+    issuer: 'LinkedIn',
+    date: 'August 2026',
+    orgLogo: LinkedInLogo,
+    image: Microservices,
+    credentialUrl: 'https://www.linkedin.com/learning/certificates/0ec6030db95b6889b6a5c36b1dff0ecd5ace6667c98a7796192158ef6e4c2aab?trk=share_certificate',
+    skills: ['Microservices']
+  },
+  {
+    title: 'DevOps Foundations: Microservices',
+    issuer: 'LinkedIn',
+    date: 'July 2026',
+    orgLogo: LinkedInLogo,
+    image: DevOps,
+    credentialUrl: 'https://www.linkedin.com/learning/certificates/ed8e47c02c9769a3f4e55e215617ae9ba200037496a67582e34620fd5b44fb64?trk=share_certificate',
+    skills: ['Microservices', 'DevOps']
+  },
   {
     title: 'Docker Foundations Professional Certificate',
     issuer: 'Docker & LinkedIn',
     date: 'July 2026',
     orgLogo: DockerLogo,
     image: Docker,
-    credentialUrl: 'https://www.linkedin.com/learning/certificates/7a49559a9c0a9c02fcc319d8152cb425d4841a36a307951dfc6d6f1bb7cf7121?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BQem0wtXHTsy5KaGtCAySeA%3D%3D',
+    credentialUrl: 'https://www.linkedin.com/learning/certificates/7a49559a9c0a9c02fcc319d8152cb425d4841a36a307951dfc6d6f1bb7cf7121?trk=share_certificate',
     skills: ['Docker', 'Containers', 'Containerization']
   },
   {
