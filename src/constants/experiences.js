@@ -1,5 +1,13 @@
 export const EXPERIENCES = [
   {
+    year: "Oct 2026 - Present",
+    role: "Full Stack Web Developer",
+    company: "Endsofttech Web Solutions",
+    description: `
+       • Maintain SaaS Application.`,
+    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Jira"],
+  },
+  {
     year: "Apr 2026 - Sept 2026",
     role: "Software Developer",
     company: "Inspire Holdings Inc.",
