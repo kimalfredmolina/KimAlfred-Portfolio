@@ -4,7 +4,7 @@ export const EXPERIENCES = [
     role: "Full Stack Web Developer",
     company: "Endsofttech Web Solutions",
     description: `
-       • Maintain SaaS Application.`,
+       • Maintain SaaS Web Applications.`,
     technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Jira"],
   },
   {
