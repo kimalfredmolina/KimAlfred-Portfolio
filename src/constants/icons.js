@@ -42,6 +42,7 @@ import actions from '../assets/icons/actions.png';
 import docker from '../assets/icons/docker.png';
 import postman from '../assets/icons/postman.svg';
 import prisma from '../assets/icons/prisma.png';
+import jira from '../assets/icons/jira.png';
 
 //SE
 import sdlc from '../assets/icons/sdlc.png';
@@ -90,7 +91,7 @@ export const ICONS = {
     ClickUp: clickup,
     Postman: postman,
     'Prisma ORM': prisma,
-
+    Jira: jira,
     // Software Engineering
     SDLC: sdlc,
     Agile: agile,

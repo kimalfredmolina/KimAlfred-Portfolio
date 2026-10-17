@@ -54,7 +54,7 @@ const SkillsPage = ({ isDark }) => {
     ],
     '• Tools': [
       { name: 'Git' }, { name: 'Github' }, { name: 'Postman' }, { name: 'Prisma ORM' }, { name: 'Figma' },
-      { name: 'Jest' }, { name: 'Expo' }, { name: 'ClickUp' },
+      { name: 'Jest' }, { name: 'Expo' }, { name: 'ClickUp' }, { name: 'Jira' },
     ],
     '• DevOps': [
       { name: 'Docker' }, { name: 'Github Actions' }, { name: 'CI/CD' },
