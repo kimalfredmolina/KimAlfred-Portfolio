@@ -5,7 +5,7 @@ export const EXPERIENCES = [
     company: "Endsofttech Web Solutions",
     description: `
        • Maintain SaaS Web Applications.`,
-    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Git", "Github","Jira"],
+    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Git", "Github", "Cloudflare", "Jira"],
   },
   {
     year: "Apr 2026 - Sept 2026",

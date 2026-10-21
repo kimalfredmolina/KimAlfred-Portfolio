@@ -59,6 +59,9 @@ const SkillsPage = ({ isDark }) => {
     '• DevOps': [
       { name: 'Docker' }, { name: 'Github Actions' }, { name: 'CI/CD' },
     ],
+    '• Hosting & Deployment': [
+      { name: 'Cloudflare' }, { name: 'Vercel' }, { name: 'Render' },
+    ],
     '• Software Engineering': [
       { name: 'SDLC' }, { name: 'Agile' },
     ],

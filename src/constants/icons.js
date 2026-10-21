@@ -44,6 +44,11 @@ import postman from '../assets/icons/postman.svg';
 import prisma from '../assets/icons/prisma.png';
 import jira from '../assets/icons/jira.png';
 
+// Hosting & Deployment
+import cloudflare from '../assets/icons/cloudflare.webp';
+import vercel from '../assets/icons/vercel.svg';
+import render from '../assets/icons/render.jpg';
+
 //SE
 import sdlc from '../assets/icons/sdlc.png';
 import agile from '../assets/icons/agile.png';
@@ -92,6 +97,12 @@ export const ICONS = {
     Postman: postman,
     'Prisma ORM': prisma,
     Jira: jira,
+
+    //Hosting & Deployment
+    'Cloudflare': cloudflare,
+    'Vercel': vercel,
+    'Render': render,
+
     // Software Engineering
     SDLC: sdlc,
     Agile: agile,
