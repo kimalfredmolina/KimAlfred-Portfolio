@@ -106,7 +106,7 @@ const AboutPage = ({ isDark }) => {
                   Kim Alfred
                 </h2>
                 <p className={`text-xs font-semibold ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
-                  Full-Stack Developer <span className="text-red-500 font-bold mx-1">·</span> CS Graduate
+                  Full-Stack Developer <span className="text-red-500 font-bold mx-1">·</span> SaaS & Web Applications
                 </p>
               </div>
             </div>
@@ -116,12 +116,12 @@ const AboutPage = ({ isDark }) => {
             {/* Description */}
             <div className="mb-6">
               <p className={`text-sm leading-[1.85] ${isDark ? 'text-neutral-300' : 'text-neutral-600'}`}>
-                Hi there. I'm a Computer Science graduate and Software Developer with a passion for building things that live on the internet.
+                Hi there. I'm a Full-Stack Web Developer focused on building reliable SaaS products and web applications that solve real business problems.
               </p>
 
               <p className={`text-sm leading-[1.85] mt-4 ${isDark ? 'text-neutral-300' : 'text-neutral-600'}`}>
-                I enjoy developing real-world applications, solving problems through code, and creating products where design and engineering work together
-                seamlessly. I'm constantly learning new technologies and improving my skills to build efficient, scalable, and user-focused solutions.
+                I work across the stack—from responsive frontend experiences to secure backend APIs, databases, and role-based access control. With experience in
+                React, Next.js, Node.js, NestJS, PostgreSQL, Prisma, and Supabase, I enjoy turning complex requirements into scalable, user-focused solutions.
               </p>
             </div>
 
