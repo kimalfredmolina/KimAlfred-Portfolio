@@ -50,7 +50,7 @@ const SkillsPage = ({ isDark }) => {
       { name: 'Django' }, { name: 'Node.js' }, { name: 'Express.js' }, { name: 'Next.js' }, { name: 'Nest.js' },
     ],
     '• Database Management': [
-      { name: 'MySQL' }, { name: 'Firebase' }, { name: 'MongoDB' }, { name: 'Supabase' }, { name: 'PostgreSQL' },
+      { name: 'MySQL' }, { name: 'Firebase' }, { name: 'MongoDB' }, { name: 'Supabase' }, { name: 'PostgreSQL' }, { name: 'TablePlus' },
     ],
     '• Tools': [
       { name: 'Git' }, { name: 'Github' }, { name: 'Postman' }, { name: 'Prisma ORM' }, { name: 'Figma' },
@@ -60,7 +60,7 @@ const SkillsPage = ({ isDark }) => {
       { name: 'Docker' }, { name: 'Github Actions' }, { name: 'CI/CD' },
     ],
     '• Hosting & Deployment': [
-      { name: 'Cloudflare' }, { name: 'Vercel' }, { name: 'Render' },
+      { name: 'Cloudflare' }, { name: 'DigitalOcean' }, { name: 'Vercel' }, { name: 'Render' }, 
     ],
     '• Software Engineering': [
       { name: 'SDLC' }, { name: 'Agile' },

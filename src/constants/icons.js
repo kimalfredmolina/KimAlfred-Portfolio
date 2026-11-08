@@ -28,6 +28,7 @@ import mongodb from '../assets/icons/mongodb.svg';
 import postgre from '../assets/icons/postgre.png';
 import supabase from '../assets/icons/supabase.webp';
 import mssql from '../assets/icons/mssql.png';
+import tableplus from '../assets/icons/tableplus.png';
 
 // Tools
 import git from '../assets/icons/git.png';
@@ -46,6 +47,7 @@ import jira from '../assets/icons/jira.png';
 
 // Hosting & Deployment
 import cloudflare from '../assets/icons/cloudflare.webp';
+import digitalocean from '../assets/icons/digitalocean.webp';
 import vercel from '../assets/icons/vercel.svg';
 import render from '../assets/icons/render.jpg';
 
@@ -82,6 +84,7 @@ export const ICONS = {
     PostgreSQL: postgre,
     Supabase: supabase,
     'MS SQL Server': mssql,
+    TablePlus: tableplus,
 
     // Tools
     Git: git,
@@ -100,6 +103,7 @@ export const ICONS = {
 
     //Hosting & Deployment
     'Cloudflare': cloudflare,
+    'DigitalOcean': digitalocean,
     'Vercel': vercel,
     'Render': render,
 

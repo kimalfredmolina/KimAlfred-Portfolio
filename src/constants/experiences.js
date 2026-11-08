@@ -4,8 +4,11 @@ export const EXPERIENCES = [
     role: "Full Stack Web Developer",
     company: "Endsofttech Web Solutions",
     description: `
-       • Maintain SaaS Web Applications.`,
-    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Git", "Github", "Cloudflare", "Jira"],
+       • Managed a veterinary SaaS platform serving 100+ client clinics, overseeing day-to-day system operations, maintenance, and performance to ensure reliable and uninterrupted service delivery.
+       • Led development team initiatives and application enhancements using the PERN stack (PostgreSQL, Express.js, React.js, and Node.js), overseeing code reviews, implementation quality, bug resolution, and code integration to maintain system stability and reliability.
+       • Orchestrated weekly production deployments through DigitalOcean, managing release activities, monitoring deployment logs, and validating updates across client clinic environments to ensure smooth and consistent releases.
+       • Administered production PostgreSQL databases and provided technical support to client clinics, troubleshooting application issues, investigating data-related concerns, and implementing solutions to minimize operational disruptions.`,
+    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "TablePlus", "Git", "Github", "Cloudflare", "DigitalOcean", "Jira", "CI/CD", "Agile"],
   },
   {
     year: "Apr 2026 - Sept 2026",

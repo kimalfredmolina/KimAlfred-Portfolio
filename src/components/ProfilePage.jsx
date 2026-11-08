@@ -149,7 +149,7 @@ export default function ProfileCard({ isDark, setIsDark }) {
                   />
                 </h1>
                 <p className={`text-lg font-semibold tracking-wide ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
-                  Software Developer <span className="text-red-500 font-bold mx-1">|</span> Full Stack Web Developer
+                  Full Stack Developer <span className="text-red-500 font-bold mx-1">|</span> Building Scalable SaaS & ERP Solutions
                 </p>
               </div>
 
